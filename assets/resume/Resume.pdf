@@ -1,0 +1,87 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R /F3 6 0 R >> >> /Contents 7 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
+endobj
+7 0 obj
+<< /Length 4093 >>
+stream
+BT
+1 0 0 1 56 740 Tm /F2 22 Tf (VISHVANATH PATIL) Tj
+1 0 0 1 56 714 Tm /F1 11 Tf (Senior Cloud Engineer  |  AWS  |  Kubernetes  |  Terraform  |  DevOps) Tj
+1 0 0 1 56 692 Tm /F1 10 Tf (Bengaluru, Karnataka, India  |  github.com/Vishvanath-Patil  |  linkedin.com/in/vishvanath-patil  |  TODO@your-email.com) Tj
+1 0 0 1 56 666 Tm /F2 11 Tf (SUMMARY) Tj
+1 0 0 1 56 650 Tm /F1 9.5 Tf (Senior Cloud Engineer with 5+ years designing, deploying, and operating resilient AWS infras) Tj
+1 0 0 1 56 637.5 Tm /F1 9.5 Tf (tructure at fintech scale. AWS Certified Solutions Architect - Associate \(Oct 2023\) and RHCS) Tj
+1 0 0 1 56 625.0 Tm /F1 9.5 Tf (A \(EX200, Dec 2024\). Hands-on with Kubernetes \(EKS\), Terraform, CI/CD and GitOps \(Jenkins, A) Tj
+1 0 0 1 56 612.5 Tm /F1 9.5 Tf (rgoCD\), and DevSecOps. Passionate about reliability, security, and automation.) Tj
+1 0 0 1 56 598.0 Tm /F2 11 Tf (EXPERIENCE) Tj
+1 0 0 1 56 582.0 Tm /F2 12 Tf (Senior Cloud Engineer - TerraPay, Bengaluru  |  Present) Tj
+1 0 0 1 56 564.0 Tm /F1 9.5 Tf (- Design and operate TerraPay's global money-movement platform on AWS; 99.9%+ uptime on paym) Tj
+1 0 0 1 56 551.5 Tm /F1 9.5 Tf (ent-critical infrastructure.) Tj
+1 0 0 1 56 537.0 Tm /F1 9.5 Tf (- Own CI/CD and GitOps pipelines \(Jenkins, ArgoCD\) for zero-downtime releases across EKS clu) Tj
+1 0 0 1 56 524.5 Tm /F1 9.5 Tf (sters.) Tj
+1 0 0 1 56 510.0 Tm /F1 9.5 Tf (- Automate provisioning with Terraform; harden AWS \(IAM, VPC, security groups, KMS\) for PCI-) Tj
+1 0 0 1 56 497.5 Tm /F1 9.5 Tf (DSS and fintech compliance.) Tj
+1 0 0 1 56 483.0 Tm /F1 9.5 Tf (- Drive observability with Prometheus, Grafana, and Loki to cut alert noise and MTTR.) Tj
+1 0 0 1 56 468.5 Tm /F1 9.5 Tf (- Mentor engineers, conduct technical interviews; recognized with TerraPay's Superlative Per) Tj
+1 0 0 1 56 456.0 Tm /F1 9.5 Tf (formance Award.) Tj
+1 0 0 1 56 441.5 Tm /F2 12 Tf (Cloud / DevOps Engineer  |  Earlier Roles) Tj
+1 0 0 1 56 423.5 Tm /F1 9.5 Tf (- End-to-end AWS projects: three-tier applications, EKS platforms, serverless, and ECS/Farga) Tj
+1 0 0 1 56 411.0 Tm /F1 9.5 Tf (te workloads.) Tj
+1 0 0 1 56 396.5 Tm /F1 9.5 Tf (- Complete DevSecOps pipelines: Jenkins, SonarQube, Trivy, Vault, ArgoCD - security shifted ) Tj
+1 0 0 1 56 384.0 Tm /F1 9.5 Tf (left.) Tj
+1 0 0 1 56 369.5 Tm /F1 9.5 Tf (- Automated Linux systems administration \(Ansible\) and SSL/TLS certificate lifecycle managem) Tj
+1 0 0 1 56 357.0 Tm /F1 9.5 Tf (ent.) Tj
+1 0 0 1 56 342.5 Tm /F2 11 Tf (SKILLS) Tj
+1 0 0 1 56 326.5 Tm /F1 9.5 Tf (Cloud & Infra:   AWS \(EC2, VPC, EKS, ECS/Fargate, ECR, RDS, IAM, KMS, Lambda\), Terraform, He) Tj
+1 0 0 1 56 314.0 Tm /F1 9.5 Tf (lm, Ansible, Docker) Tj
+1 0 0 1 56 299.5 Tm /F1 9.5 Tf (CI/CD & DevSecOps:  Jenkins, ArgoCD / GitOps, SonarQube, Trivy, OWASP Dependency-Check, Hash) Tj
+1 0 0 1 56 287.0 Tm /F1 9.5 Tf (iCorp Vault) Tj
+1 0 0 1 56 272.5 Tm /F1 9.5 Tf (Observability:   Prometheus, Grafana, Loki, CloudWatch, alerting and runbooks) Tj
+1 0 0 1 56 258.0 Tm /F1 9.5 Tf (OS & Networking: Linux \(RHEL/Rocky\), Bash, SSL/TLS, TCP/IP, CCNA-level networking, Sophos fi) Tj
+1 0 0 1 56 245.5 Tm /F1 9.5 Tf (rewall) Tj
+1 0 0 1 56 231.0 Tm /F1 9.5 Tf (Application Dev: Python, Java \(Spring Boot\), React + TypeScript basics  |  100+ public GitHu) Tj
+1 0 0 1 56 218.5 Tm /F1 9.5 Tf (b repos) Tj
+1 0 0 1 56 204.0 Tm /F2 11 Tf (CERTIFICATIONS) Tj
+1 0 0 1 56 188.0 Tm /F1 9.5 Tf (- AWS Certified Solutions Architect - Associate  |  Amazon Web Services  |  Oct 2023 - Oct 2) Tj
+1 0 0 1 56 175.5 Tm /F1 9.5 Tf (026) Tj
+1 0 0 1 56 161.0 Tm /F1 9.5 Tf (- Red Hat Certified System Administrator \(RHCSA\) EX200  |  Red Hat  |  Dec 2024 - Dec 2027) Tj
+1 0 0 1 56 146.5 Tm /F1 9.5 Tf (- Advanced Networking \(CCNA\)  |  NSDC  |  Feb 2022    Sophos Firewall Engineer / Technician ) Tj
+1 0 0 1 56 134.0 Tm /F1 9.5 Tf ( |  Feb 2022) Tj
+1 0 0 1 56 119.5 Tm /F1 9.5 Tf (- Mastering SSL \(TLS\), Keys and Certificates  |  Udemy  |  Jul 2025) Tj
+1 0 0 1 56 105.0 Tm /F2 11 Tf (EDUCATION) Tj
+1 0 0 1 56 89.0 Tm /F1 9.5 Tf (B.E. / Computer Engineering - Karnataka, India) Tj
+ET
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000267 00000 n 
+0000000337 00000 n 
+0000000412 00000 n 
+0000000490 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+4635
+%%EOF

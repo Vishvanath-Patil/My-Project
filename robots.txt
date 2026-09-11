@@ -1,0 +1,7 @@
+# Allow all crawlers (default for a personal portfolio)
+User-agent: *
+Allow: /
+
+# Keep the GitHub Pages debug fluff out of search results
+Disallow: /*.html?print=true
+Disallow: /assets/resume/

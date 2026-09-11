@@ -20,7 +20,7 @@ var siteConfig = {
     "operating resilient infrastructure on AWS. AWS Certified Solutions Architect and " +
     "Red Hat Certified System Administrator building CI/CD pipelines, Kubernetes " +
     "platforms, and GitOps workflows that ship fintech-scale systems with confidence.",
-  email: "TODO@your-email.com", // ← ✏️ replace with your real email
+  email: "pvishva93@gmail.com",
   socials: {
     linkedin:  { url: "https://www.linkedin.com/in/vishvanath-patil/",  label: "LinkedIn"  },
     github:    { url: "https://github.com/Vishvanath-Patil",            label: "GitHub"    },

@@ -56,7 +56,7 @@ gh repo edit --enable-pages --source master  # or via web UI
 |---|---|---|
 | `name` | `Vishvanath Patil` | keep |
 | `role` | `Senior Cloud Engineer` | edit if you like |
-| `email` | `TODO@your-email.com` | **replace with your real email** |
+| `email` | `pvishva93@gmail.com` | set — used by contact form & resume |
 | `linkedin` | `https://www.linkedin.com/in/vishvanath-patil/` | keep |
 | `github` | `https://github.com/Vishvanath-Patil` | keep |
 | `instagram` | `https://instagram.com/your-handle` | **replace with your handle** |

@@ -20,21 +20,21 @@ Every asset uses a relative path, so the site works straight from `file://`.
 ## 2. Deploy to GitHub Pages
 
 **Method A — GitHub web UI (recommended for beginners):**
-1. Create a **new public repository** on GitHub, e.g. `vishvanath-portfolio`. Do *not* tick "Add a README" (we already have one).
+1. Create a **new public repository** on GitHub, e.g. `My-Project`. Do *not* tick "Add a README" (we already have one).
 2. Push this folder there:
 
    ```bash
-   git remote add origin https://github.com/Vishvanath-Patil/vishvanath-portfolio.git
-   git push -u origin main
+   git remote add origin https://github.com/Vishvanath-Patil/My-Project.git
+   git push -u origin master
    ```
    (If you created the portfolio as the *project root*, run `git add . && git commit -m "Initial commit"` first.)
 
 3. On GitHub: repo → **Settings → Pages** → under **Build and deployment**, select:
    - Source: **Deploy from a branch**
-   - Branch: `main`, folder: `/ (root)` → **Save**
+   - Branch: `master`, folder: `/ (root)` → **Save**
 4. Wait ~1 minute. Your site is live at:
 
-   **`https://Vishvanath-Patil.github.io/vishvanath-portfolio/`**
+   **`https://Vishvanath-Patil.github.io/My-Project/`**
 
 5. Want your own subdomain later? A `CNAME` file with your domain + DNS record turns it into `https://vishvanath.dev/`.
 
@@ -42,8 +42,8 @@ Every asset uses a relative path, so the site works straight from `file://`.
 ```bash
 cd career-portfolio
 git add . && git commit -m "Initial commit"
-gh repo create vishvanath-portfolio --public --source=. --push
-gh repo edit --enable-pages --source main  # or via web UI
+gh repo create My-Project --public --source=. --push
+gh repo edit --enable-pages --source master  # or via web UI
 ```
 
 ---

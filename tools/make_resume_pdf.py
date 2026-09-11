@@ -54,7 +54,7 @@ def main():
     ops.append(("HEL", 11, y, "Senior Cloud Engineer  |  AWS  |  Kubernetes  |  Terraform  |  DevOps")); y -= 22
     ops.append(("HEL", 10, y,
                 "Bengaluru, Karnataka, India  |  github.com/Vishvanath-Patil  |  "
-                "linkedin.com/in/vishvanath-patil  |  TODO@your-email.com")); y -= 26
+                "linkedin.com/in/vishvanath-patil  |  pvishva93@gmail.com")); y -= 26
 
     heading("SUMMARY")
     line("Senior Cloud Engineer with 5+ years designing, deploying, and operating resilient AWS "

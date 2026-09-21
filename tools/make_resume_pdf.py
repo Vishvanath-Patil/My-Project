@@ -36,12 +36,12 @@ def main():
     ops = []
     y = TOP
 
-    def heading(text, size=11, gap=5):
+    def heading(text, size=11, gap=4):
         nonlocal y
         ops.append(("HEB", size, y, text))
         y -= size + gap
 
-    def line(text, size=9.5, gap=3):
+    def line(text, size=9.5, gap=2):
         nonlocal y
         for chunk in [text[i:i + 92] for i in range(0, len(text), 92)]:
             ops.append(("HEL", size, y, chunk))
@@ -63,7 +63,7 @@ def main():
          "(Jenkins, ArgoCD), and DevSecOps. Passionate about reliability, security, and automation.")
 
     heading("EXPERIENCE")
-    ops.append(("HEB", 12, y, "Senior Cloud Engineer - TerraPay, Bengaluru  |  Present")); y -= 18
+    ops.append(("HEB", 12, y, "Sr Cloud Engineer - TerraPay, India  |  Feb 2024 - Present")); y -= 18
     for b in [
         "- Design and operate TerraPay's global money-movement platform on AWS; 99.9%+ uptime on payment-critical infrastructure.",
         "- Own CI/CD and GitOps pipelines (Jenkins, ArgoCD) for zero-downtime releases across EKS clusters.",
@@ -72,11 +72,16 @@ def main():
         "- Mentor engineers, conduct technical interviews; recognized with TerraPay's Superlative Performance Award.",
     ]:
         line(b)
-    ops.append(("HEB", 12, y, "Cloud / DevOps Engineer  |  Earlier Roles")); y -= 18
+    ops.append(("HEB", 12, y, "DevOps Engineer - Tata Consultancy Services, Bangalore  |  May 2022 - Feb 2024")); y -= 18
     for b in [
         "- End-to-end AWS projects: three-tier applications, EKS platforms, serverless, and ECS/Fargate workloads.",
         "- Complete DevSecOps pipelines: Jenkins, SonarQube, Trivy, Vault, ArgoCD - security shifted left.",
+    ]:
+        line(b)
+    ops.append(("HEB", 12, y, "Network Engineer - Alackrity Consols, Bengaluru  |  May 2018 - May 2022")); y -= 18
+    for b in [
         "- Automated Linux systems administration (Ansible) and SSL/TLS certificate lifecycle management.",
+        "- Enterprise network operations: CCNA-level TCP/IP, routing and switching, Sophos firewall.",
     ]:
         line(b)
 

@@ -311,6 +311,7 @@ section { padding: 56px 0; }
 .timeline h3 { margin: 0; font-size: 1.06rem; }
 .timeline .when { font-size: 0.8rem; color: var(--text-faint); font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
 .timeline .where { color: var(--primary); font-weight: 700; font-size: 0.95rem; margin: 2px 0 8px; }
+.timeline .tl-skills { color: var(--text-faint); font-size: 0.8rem; margin: 2px 0 8px; }
 .timeline ul { margin: 0; font-size: 0.95rem; color: var(--text-soft); }
 
 /* ---------- 11. Cards (projects / products) ---------- */

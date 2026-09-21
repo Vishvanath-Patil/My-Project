@@ -79,12 +79,13 @@ function renderSocials() {
    ------------------------------------------------------------ */
 var experience = [
   {
-    role: "Senior Cloud Engineer",
+    role: "Sr Cloud Engineer",
     company: "TerraPay",
-    where: "Bengaluru, India",
-    when: "Present",
+    where: "India · Hybrid",
+    when: "Feb 2024 - Present",
+    skills: ["DevOps", "Amazon Web Services (AWS)"],
     points: [
-      "Instrumental to designing and operating TerraPay's global money-movement platform on AWS — consistently meeting 99.9%+ uptime on payment-critical infrastructure.",
+      "Design and operate TerraPay's global money-movement platform on AWS — meeting 99.9%+ uptime on payment-critical infrastructure.",
       "Build and own CI/CD & GitOps pipelines (Jenkins, ArgoCD) powering zero-downtime releases across EKS clusters.",
       "Automate cloud provisioning with Terraform and harden the AWS environment — IAM, VPC, security groups, KMS — in line with PCI-DSS and fintech compliance.",
       "Drive observability with Prometheus, Grafana, and Loki; slash alert noise and mean-time-to-recovery with runbooks.",
@@ -93,15 +94,24 @@ var experience = [
     ]
   },
   {
-    role: "Cloud / DevOps Engineer",
-    company: "Cloud & DevOps Engineering",
-    where: "India",
-    when: "Earlier",
+    role: "DevOps Engineer",
+    company: "Tata Consultancy Services",
+    where: "Bangalore",
+    when: "May 2022 - Feb 2024",
+    skills: ["Prometheus", "Kubernetes"],
     points: [
       "Delivered end-to-end infrastructure projects across AWS: three-tier applications, Kubernetes (EKS) platforms, serverless, and containerized workloads on ECS/Fargate.",
-      "Implemented complete DevSecOps pipelines — Jenkins, SonarQube, Trivy, HashiCorp Vault, and ArgoCD — shifting security left.",
-      "Trained and prepared engineers for AWS, RHCSA, and Kubernetes certifications with hands-on labs and study kits.",
-      "Automated Linux systems administration, orchestration (Ansible), and SSL/TLS lifecycle management."
+      "Implemented complete DevSecOps pipelines — Jenkins, SonarQube, Trivy, HashiCorp Vault, and ArgoCD — shifting security left."
+    ]
+  },
+  {
+    role: "Network Engineer",
+    company: "Alackrity Consols",
+    where: "Bengaluru, Karnataka, India",
+    when: "May 2018 - May 2022",
+    points: [
+      "Automated Linux systems administration, orchestration (Ansible), and SSL/TLS lifecycle management.",
+      "Enterprise network operations — CCNA-level TCP/IP, routing & switching — and Sophos firewall management."
     ]
   }
 ];

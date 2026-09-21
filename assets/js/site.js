@@ -16,7 +16,7 @@ var siteConfig = {
   companyUrl: "",               // ← optional company website (leave "" to hide link)
   location: "Bengaluru, Karnataka, India",
   summary:
-    "Cloud & DevOps engineer with 5+ years of experience designing, deploying, and " +
+    "Cloud & DevOps engineer with 8+ years of experience designing, deploying, and " +
     "operating resilient infrastructure on AWS. AWS Certified Solutions Architect and " +
     "Red Hat Certified System Administrator building CI/CD pipelines, Kubernetes " +
     "platforms, and GitOps workflows that ship fintech-scale systems with confidence.",
@@ -29,7 +29,7 @@ var siteConfig = {
     youtube:   { url: "https://youtube.com/@VishvanathPatil",           label: "YouTube"   }  // ← ✏️ replace
   },
   stats: {
-    years: "5+",
+    years: "8+",
     repos: "117+",
     certs: "6"
   }

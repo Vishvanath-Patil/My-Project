@@ -181,6 +181,19 @@ function setupYear() {
 }
 
 /* ------------------------------------------------------------
+   8b. BACK TO TOP — smooth scroll regardless of nav layout
+   ------------------------------------------------------------ */
+function setupBackToTop() {
+  document.querySelectorAll('a[href="#top"]').forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      e.preventDefault();
+      try { window.scrollTo({ top: 0, behavior: "smooth" }); }
+      catch (err) { window.scrollTo(0, 0); }
+    });
+  });
+}
+
+/* ------------------------------------------------------------
    Init
    ------------------------------------------------------------ */
 document.addEventListener("DOMContentLoaded", function () {
@@ -189,4 +202,5 @@ document.addEventListener("DOMContentLoaded", function () {
   setupTheme();
   setupNav();
   setupYear();
+  setupBackToTop();
 });

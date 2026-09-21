@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark light">
-  <title>Digital Products</title>
-  <meta name="description" content="Free digital products by Vishvanath Patil — RHCSA-9 study kit, DevOps interview guide, Kubernetes starter kit, Terraform roadmap, and cloud learning notes.">
+  <title>Projects</title>
+  <meta name="description" content="Open-source projects by Vishvanath Patil — AWS microservices on ECS Fargate, CI/CD &amp; GitOps pipelines, Terraform, Kubernetes, and DevOps learning material, built in the open on GitHub.">
   <meta name="theme-color" content="#2f5fd0">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -32,7 +32,7 @@
       <ul class="nav-links" id="navMenu">
         <li><a href="index.html">Home</a></li>
         <li><a href="resume.html">Resume</a></li>
-        <li><a href="products.html" aria-current="page">Digital Products</a></li>
+        <li><a href="products.html" aria-current="page">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li>
           <button class="icon-btn" id="themeToggle" aria-label="Toggle dark / light theme">
@@ -50,21 +50,39 @@
     <section class="hero">
       <div class="wrap">
         <div class="section-head" style="margin-bottom:0;">
-          <span class="eyebrow">Digital products</span>
-          <h1 style="font-size:clamp(1.8rem,4vw,2.6rem);">Study kits, guides &amp; tools<br>for cloud &amp; DevOps engineers</h1>
-          <p>The exact notes, guides, and hands-on material I use and share with the community. All <strong>free</strong>, open, and battle-tested — download straight from GitHub.</p>
+          <span class="eyebrow">Projects</span>
+          <h1 style="font-size:clamp(1.8rem,4vw,2.6rem);">Cloud &amp; DevOps projects,<br>built in the open</h1>
+          <p>Hands-on projects from my day-to-day work building cloud infrastructure — AWS microservices on ECS Fargate, CI/CD &amp; GitOps pipelines, Terraform, and automation. All <strong>open-source</strong>, all on GitHub.</p>
+          <p style="margin-top:20px;">
+            <a class="btn btn-primary" href="https://github.com/Vishvanath-Patil?tab=repositories" target="_blank" rel="noopener">Browse all 117+ repositories →</a>
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- ======================= PRODUCTS GRID ======================= -->
+    <!-- ======================= PROJECTS GRID ======================= -->
     <section style="padding-top:0;">
       <div class="wrap grid-cards">
 
         <article class="card">
           <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
-            <span class="card-tag">Linux</span>
+            <span class="card-price">Open source <small>· GitHub</small></span>
+            <span class="card-tag">AWS · ECS</span>
+          </div>
+          <div class="thumb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+          </div>
+          <h3><a href="https://github.com/Vishvanath-Patil/aws-ecs-fargate-microservices-deployment-project" target="_blank" rel="noopener">ECS Fargate Microservices</a></h3>
+          <p>Production-ready microservices deployed on AWS ECS Fargate — Docker, ECR, ALB, RDS PostgreSQL, Secrets Manager, VPC, NAT Gateway, and VPC Endpoints, wired end to end.</p>
+          <div class="link-row">
+            <a href="https://github.com/Vishvanath-Patil/aws-ecs-fargate-microservices-deployment-project" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="card-price">Open source <small>· GitHub</small></span>
+            <span class="card-tag">Linux · RHCSA</span>
           </div>
           <div class="thumb">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
@@ -72,126 +90,265 @@
           <h3><a href="https://github.com/Vishvanath-Patil/RHCSA-9_EX200" target="_blank" rel="noopener">RHCSA-9 (EX200) Study Kit</a></h3>
           <p>Comprehensive study notes and practice dumps for the Red Hat EX200 exam — every objective covered, from user management to SELinux and shell scripting.</p>
           <div class="link-row">
-            <a href="https://github.com/Vishvanath-Patil/RHCSA-9_EX200" target="_blank" rel="noopener">Get it on GitHub ↗</a>
+            <a href="https://github.com/Vishvanath-Patil/RHCSA-9_EX200" target="_blank" rel="noopener">View on GitHub ↗</a>
           </div>
         </article>
 
         <article class="card">
           <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
+            <span class="card-price">Open source <small>· GitHub</small></span>
+            <span class="card-tag">DevSecOps · EKS</span>
+          </div>
+          <div class="thumb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v3"/><path d="M12 18v3"/><path d="M3 12h3"/><path d="M18 12h3"/><circle cx="12" cy="12" r="2.5"/><path d="M5.6 5.6l2.1 2.1"/><path d="M16.3 16.3l2.1 2.1"/><path d="M18.4 5.6l-2.1 2.1"/><path d="M7.7 16.3l-2.1 2.1"/></svg>
+          </div>
+          <h3><a href="https://github.com/Vishvanath-Patil/Jenkins-EKS-ECR-Argocd-Monitoring-Three-Tier-Project" target="_blank" rel="noopener">Three-Tier DevSecOps Project</a></h3>
+          <p>End-to-end three-tier application shipped through the full stack — Jenkins CI/CD to ECR and EKS, GitOps with ArgoCD, and Prometheus/Grafana monitoring on top.</p>
+          <div class="link-row">
+            <a href="https://github.com/Vishvanath-Patil/Jenkins-EKS-ECR-Argocd-Monitoring-Three-Tier-Project" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="card-price">Open source <small>· GitHub</small></span>
+            <span class="card-tag">CI/CD · Observability</span>
+          </div>
+          <div class="thumb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="6" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M12 8.5V11"/><path d="M6 16.5l4-4"/><path d="M18 16.5l-4-4"/></svg>
+          </div>
+          <h3><a href="https://github.com/Vishvanath-Patil/Sample-App-Deployment" target="_blank" rel="noopener">Sample App — Full Pipeline</a></h3>
+          <p>nginx deployed across the complete chain — Jenkins, ECR, EKS, ALB, Ingress, and Route 53 — with Prometheus, Loki &amp; Grafana providing end-to-end observability.</p>
+          <div class="link-row">
+            <a href="https://github.com/Vishvanath-Patil/Sample-App-Deployment" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="card-price">Open source <small>· GitHub</small></span>
+            <span class="card-tag">AWS · Learning</span>
+          </div>
+          <div class="thumb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+          <h3><a href="https://github.com/Vishvanath-Patil/AWS-Zero-to-Hero-by-Vishvanath" target="_blank" rel="noopener">AWS Zero to Hero</a></h3>
+          <p>The Complete AWS Course — a structured, hands-on path from core compute, storage, and networking services to production-ready architecture.</p>
+          <div class="link-row">
+            <a href="https://github.com/Vishvanath-Patil/AWS-Zero-to-Hero-by-Vishvanath" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="card-price">Open source <small>· GitHub</small></span>
+            <span class="card-tag">Architecture</span>
+          </div>
+          <div class="thumb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 8l10-5 10 5-10 5L2 8z"/><path d="M2 16l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3><a href="https://github.com/Vishvanath-Patil/Three-Tier-Application-Deployment-Project" target="_blank" rel="noopener">Three-Tier Application</a></h3>
+          <p>A production-style three-tier application — web, app, and database layers — containerized, deployed on AWS, and wired through a CI/CD pipeline.</p>
+          <div class="link-row">
+            <a href="https://github.com/Vishvanath-Patil/Three-Tier-Application-Deployment-Project" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="card-price">Open source <small>· GitHub</small></span>
+            <span class="card-tag">Automation</span>
+          </div>
+          <div class="thumb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <h3><a href="https://github.com/Vishvanath-Patil/Ansible" target="_blank" rel="noopener">Ansible — Zero to Hero</a></h3>
+          <p>A complete Ansible learning path with hands-on labs: modules, playbooks, roles, handlers, templates, tags, and host variables.</p>
+          <div class="link-row">
+            <a href="https://github.com/Vishvanath-Patil/Ansible" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="card-price">Open source <small>· GitHub</small></span>
+            <span class="card-tag">Terraform · IaC</span>
+          </div>
+          <div class="thumb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 3v8h8V3H3zM13 13v8h8v-8h-8zM3 13h8v8H3zM13 3h8v8h-8z"/></svg>
+          </div>
+          <h3><a href="https://github.com/Vishvanath-Patil/Terraform-AWS-Project" target="_blank" rel="noopener">Terraform AWS Project</a></h3>
+          <p>Terraform infrastructure-as-code for AWS — VPCs, EC2, EKS, and supporting services, written to be reusable and reviewed like production code.</p>
+          <div class="link-row">
+            <a href="https://github.com/Vishvanath-Patil/Terraform-AWS-Project" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="card-price">Open source <small>· GitHub</small></span>
+            <span class="card-tag">Microservices</span>
+          </div>
+          <div class="thumb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3><a href="https://github.com/Vishvanath-Patil/MicroServices-Python-App" target="_blank" rel="noopener">Microservices Python App</a></h3>
+          <p>Python-based microservices, containerized and demonstrating service-to-service communication — a reference for building on AWS.</p>
+          <div class="link-row">
+            <a href="https://github.com/Vishvanath-Patil/MicroServices-Python-App" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="card-price">Open source <small>· GitHub</small></span>
+            <span class="card-tag">Security · IAM</span>
+          </div>
+          <div class="thumb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h3><a href="https://github.com/Vishvanath-Patil/IAM_Cross_Account_Access" target="_blank" rel="noopener">IAM Cross-Account Access</a></h3>
+          <p>Secure cross-account IAM patterns — granting scoped, auditable access between AWS accounts without sharing long-lived credentials.</p>
+          <div class="link-row">
+            <a href="https://github.com/Vishvanath-Patil/IAM_Cross_Account_Access" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="card-price">Open source <small>· GitHub</small></span>
+            <span class="card-tag">FinOps</span>
+          </div>
+          <div class="thumb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v10"/><path d="M9 9.5h3.6a1.9 1.9 0 0 1 0 3.8H9.2a1.9 1.9 0 0 0 0 3.8H13"/></svg>
+          </div>
+          <h3><a href="https://github.com/Vishvanath-Patil/AWS-Cost-Optimization-Tasks" target="_blank" rel="noopener">AWS Cost Optimization</a></h3>
+          <p>Hands-on AWS cost-optimization tasks — rightsizing, savings plans, spot usage, and budget-driven cleanup, with Python scripts included.</p>
+          <div class="link-row">
+            <a href="https://github.com/Vishvanath-Patil/AWS-Cost-Optimization-Tasks" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="card-price">Open source <small>· GitHub</small></span>
             <span class="card-tag">Interview Prep</span>
           </div>
           <div class="thumb">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           </div>
-          <h3><a href="https://github.com/Vishvanath-Patil/DevOps-Interview-Guide" target="_blank" rel="noopener">DevOps Interview Guide</a></h3>
-          <p>Curated questions and detailed answers from real DevOps &amp; cloud interviews — Linux, networking, Kubernetes, CI/CD, Terraform, and SRE scenarios.</p>
-          <div class="link-row">
-            <a href="https://github.com/Vishvanath-Patil/DevOps-Interview-Guide" target="_blank" rel="noopener">Get it on GitHub ↗</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
-            <span class="card-tag">Kubernetes</span>
-          </div>
-          <div class="thumb">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v3"/><path d="M12 18v3"/><path d="M3 12h3"/><path d="M18 12h3"/><circle cx="12" cy="12" r="2.5"/><path d="M5.6 5.6l2.1 2.1"/><path d="M16.3 16.3l2.1 2.1"/><path d="M18.4 5.6l-2.1 2.1"/><path d="M7.7 16.3l-2.1 2.1"/></svg>
-          </div>
-          <h3><a href="https://github.com/Vishvanath-Patil/kubestarter" target="_blank" rel="noopener">kubestarter</a></h3>
-          <p>Get started with Kubernetes the hands-on way — manifests, examples, and labs from Pods to Deployments, Services, Ingress, and Helm.</p>
-          <div class="link-row">
-            <a href="https://github.com/Vishvanath-Patil/kubestarter" target="_blank" rel="noopener">Get it on GitHub ↗</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
-            <span class="card-tag">Terraform</span>
-          </div>
-          <div class="thumb">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 3v8h8V3H3zM13 13v8h8v-8h-8zM3 13h8v8H3zM13 3h8v8h-8z"/></svg>
-          </div>
-          <h3><a href="https://github.com/Vishvanath-Patil/terraform-zero-to-hero" target="_blank" rel="noopener">Terraform Zero to Hero</a></h3>
-          <p>A 7-day roadmap to master Terraform — resources, variables, modules, state, and real AWS provisioning, with labs along the way.</p>
-          <div class="link-row">
-            <a href="https://github.com/Vishvanath-Patil/terraform-zero-to-hero" target="_blank" rel="noopener">Get it on GitHub ↗</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
-            <span class="card-tag">DevOps</span>
-          </div>
-          <div class="thumb">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 4 12 20.5 2 4h6l4 7 4-7h6z"/></svg>
-          </div>
-          <h3><a href="https://github.com/Vishvanath-Patil/devops-cloud-interview-guide" target="_blank" rel="noopener">DevOps &amp; Cloud Interview Guide (Course Notes)</a></h3>
-          <p>Companion repository to the DevOps &amp; Cloud Interview Guide course — every module summarized with questions, answers, and quick revision cards.</p>
-          <div class="link-row">
-            <a href="https://github.com/Vishvanath-Patil/devops-cloud-interview-guide" target="_blank" rel="noopener">Get it on GitHub ↗</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
-            <span class="card-tag">Ansible</span>
-          </div>
-          <div class="thumb">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="6" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M12 8.5V11"/><path d="M6 16.5l4-4"/><path d="M18 16.5l-4-4"/></svg>
-          </div>
-          <h3><a href="https://github.com/Vishvanath-Patil/Ansible" target="_blank" rel="noopener">Ansible — Zero to Hero</a></h3>
-          <p>A complete Ansible learning path with hands-on labs: modules, playbooks, roles, handlers, templates, tags, and host variables.</p>
-          <div class="link-row">
-            <a href="https://github.com/Vishvanath-Patil/Ansible" target="_blank" rel="noopener">Get it on GitHub ↗</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
-            <span class="card-tag">Interview Prep</span>
-          </div>
-          <div class="thumb">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          </div>
-          <h3><a href="https://github.com/Vishvanath-Patil/Cloud-DevOps-Learning-Resources" target="_blank" rel="noopener">Cloud &amp; DevOps Learning Resources</a></h3>
-          <p>A curated library of books and important notes for AWS, Azure, GCP, Docker, K8s, and DevOps — plus exam and interview prep material.</p>
-          <div class="link-row">
-            <a href="https://github.com/Vishvanath-Patil/Cloud-DevOps-Learning-Resources" target="_blank" rel="noopener">Get it on GitHub ↗</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
-            <span class="card-tag">DevOps</span>
-          </div>
-          <div class="thumb">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
-          </div>
-          <h3><a href="https://github.com/Vishvanath-Patil/DevOps-Interview-Questions" target="_blank" rel="noopener">DevOps Interview Questions &amp; Answers</a></h3>
+          <h3><a href="https://github.com/Vishvanath-Patil/DevOps-Interview-Questions" target="_blank" rel="noopener">DevOps Interview Questions</a></h3>
           <p>100+ frequently asked DevOps interview questions with concise, practical answers — a quick-revision companion before any interview.</p>
           <div class="link-row">
-            <a href="https://github.com/Vishvanath-Patil/DevOps-Interview-Questions" target="_blank" rel="noopener">Get it on GitHub ↗</a>
+            <a href="https://github.com/Vishvanath-Patil/DevOps-Interview-Questions" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="card-price">Open source <small>· GitHub</small></span>
+            <span class="card-tag">DevSecOps · EKS</span>
+          </div>
+          <div class="thumb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+          </div>
+          <h3><a href="https://github.com/Vishvanath-Patil/End-to-End-Kubernetes-DevSecOps-Tetris-Project" target="_blank" rel="noopener">Tetris DevSecOps Project</a></h3>
+          <p>Hands-on DevSecOps project deploying a Tetris game on AWS EKS — Jenkins CI/CD, ArgoCD GitOps, Terraform IaC, Docker, Trivy scanning, and SonarQube code quality.</p>
+          <div class="link-row">
+            <a href="https://github.com/Vishvanath-Patil/End-to-End-Kubernetes-DevSecOps-Tetris-Project" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="card-price">Open source <small>· GitHub</small></span>
+            <span class="card-tag">Kubernetes · Learning</span>
+          </div>
+          <div class="thumb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          </div>
+          <h3><a href="https://github.com/Vishvanath-Patil/kubestarter" target="_blank" rel="noopener">kubestarter</a></h3>
+          <p>A repository to get you started with Kubernetes — from cluster basics to running your first workloads, with hands-on examples.</p>
+          <div class="link-row">
+            <a href="https://github.com/Vishvanath-Patil/kubestarter" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="card-price">Open source <small>· GitHub</small></span>
+            <span class="card-tag">End-to-End · AWS</span>
+          </div>
+          <div class="thumb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+          </div>
+          <h3><a href="https://github.com/Vishvanath-Patil/ultimate-devops-project-aws" target="_blank" rel="noopener">Ultimate DevOps Project</a></h3>
+          <p>An end-to-end DevOps project on AWS — the full lifecycle from source code and CI/CD to cloud deployment and automation.</p>
+          <div class="link-row">
+            <a href="https://github.com/Vishvanath-Patil/ultimate-devops-project-aws" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="card-price">Open source <small>· GitHub</small></span>
+            <span class="card-tag">Java · Spring Boot</span>
+          </div>
+          <div class="thumb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          </div>
+          <h3><a href="https://github.com/Vishvanath-Patil/Expenses-Tracker-WebApp" target="_blank" rel="noopener">Expenses Tracker WebApp</a></h3>
+          <p>A full-stack financial management app — Spring Boot, Spring MVC, Spring Security, Spring Data JPA, MySQL, Thymeleaf, and Bootstrap.</p>
+          <div class="link-row">
+            <a href="https://github.com/Vishvanath-Patil/Expenses-Tracker-WebApp" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="card-price">Open source <small>· GitHub</small></span>
+            <span class="card-tag">CI/CD · Learning</span>
+          </div>
+          <div class="thumb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3><a href="https://github.com/Vishvanath-Patil/Jenkins-Zero-To-Hero" target="_blank" rel="noopener">Jenkins Zero to Hero</a></h3>
+          <p>Install Jenkins, configure Docker as a build agent, set up CI/CD, and deploy applications to Kubernetes — a complete learning path.</p>
+          <div class="link-row">
+            <a href="https://github.com/Vishvanath-Patil/Jenkins-Zero-To-Hero" target="_blank" rel="noopener">View on GitHub ↗</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <span class="card-price">Open source <small>· GitHub</small></span>
+            <span class="card-tag">AWS · Labs</span>
+          </div>
+          <div class="thumb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3><a href="https://github.com/Vishvanath-Patil/aws-lab-guide" target="_blank" rel="noopener">AWS Lab Guide</a></h3>
+          <p>An Amazon Web Services practice lab guide — enough structure that absolute beginners can run the hands-on labs themselves.</p>
+          <div class="link-row">
+            <a href="https://github.com/Vishvanath-Patil/aws-lab-guide" target="_blank" rel="noopener">View on GitHub ↗</a>
           </div>
         </article>
 
       </div>
+      <p class="center" style="margin-top:32px; color:var(--text-soft);">
+        …and dozens more shell-scripting projects, learning notes, and labs. Everything I build is public on
+        <a href="https://github.com/Vishvanath-Patil?tab=repositories" target="_blank" rel="noopener">my GitHub ↗</a>.
+      </p>
     </section>
 
-    <!-- ======================= REQUEST A CUSTOM KIT ======================= -->
+    <!-- ======================= REQUEST / CONTACT ======================= -->
     <section style="padding-top:0;">
       <div class="wrap">
         <div class="form-card center" style="padding:40px 28px;">
           <span class="eyebrow" style="color:var(--accent);">Something specific in mind?</span>
-          <h2 style="margin:10px 0 12px;">Need a study kit for your next certification?</h2>
-          <p style="color:var(--text-soft); max-width:560px; margin:0 auto 22px;">I regularly build and share material for AWS, Kubernetes, RHCSA, Terraform, and interviews. If there's a topic you'd like covered, reach out — I'll add it to the roadmap.</p>
-          <a class="btn btn-primary" href="contact.html">Request a topic →</a>
+          <h2 style="margin:10px 0 12px;">Have a project or stack you'd like built?</h2>
+          <p style="color:var(--text-soft); max-width:560px; margin:0 auto 22px;">I build cloud, DevOps, and automation projects in the open. If there's a problem you'd like solved or a topic you'd like covered, reach out — I'm always happy to help.</p>
+          <a class="btn btn-primary" href="contact.html">Let's talk →</a>
         </div>
       </div>
     </section>
@@ -210,7 +367,7 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="resume.html">Digital Resume</a></li>
-          <li><a href="products.html">Digital Products</a></li>
+          <li><a href="products.html">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>

@@ -57,10 +57,11 @@ def main():
                 "linkedin.com/in/vishvanath-patil  |  pvishva93@gmail.com")); y -= 26
 
     heading("SUMMARY")
-    line("Senior Cloud Engineer with 5+ years designing, deploying, and operating resilient AWS "
-         "infrastructure at fintech scale. AWS Certified Solutions Architect - Associate (Oct 2023) and "
-         "RHCSA (EX200, Dec 2024). Hands-on with Kubernetes (EKS), Terraform, CI/CD and GitOps "
-         "(Jenkins, ArgoCD), and DevSecOps. Passionate about reliability, security, and automation.")
+    line("Senior Cloud Engineer with 5+ years of experience designing, deploying, and operating "
+         "resilient AWS infrastructure at fintech scale. AWS Certified Solutions Architect - Associate "
+         "and RHCSA with hands-on expertise in Kubernetes (EKS), Terraform, CI/CD and GitOps "
+         "(Jenkins, ArgoCD), and DevSecOps. Passionate about reliability, security, and automation - "
+         "and about teaching the next generation of cloud engineers.")
 
     heading("EXPERIENCE")
     ops.append(("HEB", 12, y, "Sr Cloud Engineer - TerraPay, India  |  Feb 2024 - Present")); y -= 18
@@ -91,7 +92,7 @@ def main():
         "CI/CD & DevSecOps:  Jenkins, ArgoCD / GitOps, SonarQube, Trivy, OWASP Dependency-Check, HashiCorp Vault",
         "Observability:   Prometheus, Grafana, Loki, CloudWatch, alerting and runbooks",
         "OS & Networking: Linux (RHEL/Rocky), Bash, SSL/TLS, TCP/IP, CCNA-level networking, Sophos firewall",
-        "Application Dev: Python, Java (Spring Boot), React + TypeScript basics  |  100+ public GitHub repos",
+        "Application Dev: Python, Java (Spring Boot), React + TypeScript basics",
     ]:
         line(s)
 

@@ -223,7 +223,7 @@ section { padding: 56px 0; }
   font-size: 0.84rem; color: var(--text-soft); background: var(--surface);
   border: 1px solid var(--border); padding: 5px 12px; border-radius: 999px;
 }
-.hero-quick li svg, .hero-quick li img { width: 14px; height: 14px; flex: 0 0 auto; }
+.hero-quick li svg, .hero-quick li img { width: 16px; height: 16px; flex: 0 0 auto; }
 
 .hero-art { display: flex; justify-content: center; }
 .hero-card {
@@ -272,7 +272,7 @@ section { padding: 56px 0; }
 }
 .skill:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 .skill b { display: flex; align-items: center; gap: 8px; font-size: 0.92rem; }
-.skill b svg, .skill b img { width: 16px; height: 16px; color: var(--primary); flex: 0 0 auto; }
+.skill b svg, .skill b img { width: 18px; height: 18px; color: var(--primary); flex: 0 0 auto; }
 .skill .bar { height: 8px; border-radius: 99px; background: var(--surface-muted); margin-top: 10px; overflow: hidden; }
 .skill .bar i { display: block; height: 100%; border-radius: 99px;
   background: linear-gradient(90deg, var(--primary), var(--accent)); }
@@ -295,7 +295,7 @@ section { padding: 56px 0; }
 .cert .ico { flex: 0 0 auto; width: 44px; height: 44px; border-radius: 12px;
   background: var(--primary-soft); color: var(--primary);
   display: inline-flex; align-items: center; justify-content: center; }
-.cert .ico svg, .cert .ico img { width: 22px; height: 22px; }
+.cert .ico svg, .cert .ico img { width: 24px; height: 24px; }
 .cert h4 { margin: 0 0 2px; font-size: 0.98rem; }
 .cert p { margin: 0; font-size: 0.85rem; color: var(--text-soft); }
 .cert .when { display: inline-block; margin-top: 6px; font-size: 0.76rem; font-weight: 700;
@@ -329,7 +329,7 @@ section { padding: 56px 0; }
   color: var(--accent); background: var(--accent-soft); padding: 3px 10px; border-radius: 999px; }
 .card .thumb { height: 130px; border-radius: var(--radius-sm); background: var(--surface-muted);
   display: flex; align-items: center; justify-content: center; overflow: hidden; }
-.card .thumb svg, .card .thumb img { width: 48%; height: 48%; color: var(--primary); object-fit: contain; }
+.card .thumb svg, .card .thumb img { width: 52%; height: 52%; color: var(--primary); object-fit: contain; }
 .card h3 { margin: 0; font-size: 1.08rem; }
 .card h3 a { color: var(--text); }
 .card h3 a:hover { color: var(--primary); }

@@ -21,11 +21,13 @@ var siteConfig = {
     "Red Hat Certified System Administrator building CI/CD pipelines, Kubernetes " +
     "platforms, and GitOps workflows that ship fintech-scale systems with confidence.",
   email: "pvishva93@gmail.com",
+  phone: "+91 92410 93877",
+  whatsapp: "https://wa.me/919241093877",     // WhatsApp · +91 9241093877
   socials: {
     linkedin:  { url: "https://www.linkedin.com/in/vishvanath-patil/",  label: "LinkedIn"  },
     github:    { url: "https://github.com/Vishvanath-Patil",            label: "GitHub"    },
-    instagram: { url: "https://instagram.com/your-handle",              label: "Instagram" }, // ← ✏️ replace
-    youtube:   { url: "https://youtube.com/@your-channel",              label: "YouTube"   }  // ← ✏️ replace
+    instagram: { url: "https://instagram.com/vishvanath.patil",         label: "Instagram" }, // ← ✏️ replace
+    youtube:   { url: "https://youtube.com/@VishvanathPatil",           label: "YouTube"   }  // ← ✏️ replace
   },
   stats: {
     years: "5+",

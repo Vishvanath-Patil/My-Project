@@ -69,7 +69,8 @@ def esc(s):
 """=========================== CONTENT (keep in sync with resume.html) =="""
 ROLE = "Senior Cloud Engineer  ·  DevOps  ·  AWS  ·  Kubernetes  ·  Terraform"
 CONTACT = ("Bengaluru, Karnataka, India  |  pvishva93@gmail.com  |  "
-           "linkedin.com/in/vishvanath-patil  |  github.com/Vishvanath-Patil")
+           "+91 92410 93877  |  linkedin.com/in/vishvanath-patil  |  "
+           "github.com/Vishvanath-Patil")
 
 SUMMARY = ("Senior Cloud Engineer with 5+ years of experience designing, deploying, and operating "
            "resilient AWS infrastructure at fintech scale. AWS Certified Solutions Architect – "

@@ -133,7 +133,7 @@ section { padding: 56px 0; }
              padding-inline: 24px; display: flex; align-items: center; gap: 16px; }
 .nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 800;
              font-size: 1.05rem; color: var(--text); }
-.nav-brand svg { width: 30px; height: 30px; }
+.nav-brand svg { width: 32px; height: 32px; }
 .nav-links { margin-left: auto; display: flex; align-items: center; gap: 4px; list-style: none; }
 .nav-links a {
   display: inline-block; padding: 8px 14px; border-radius: 999px; font-weight: 600;
@@ -223,7 +223,7 @@ section { padding: 56px 0; }
   font-size: 0.84rem; color: var(--text-soft); background: var(--surface);
   border: 1px solid var(--border); padding: 5px 12px; border-radius: 999px;
 }
-.hero-quick li svg, .hero-quick li img { width: 16px; height: 16px; flex: 0 0 auto; }
+.hero-quick li svg, .hero-quick li img { width: 18px; height: 18px; flex: 0 0 auto; }
 
 .hero-art { display: flex; justify-content: center; }
 .hero-card {
@@ -247,7 +247,7 @@ section { padding: 56px 0; }
   background: var(--surface); border: 1px solid var(--border); color: var(--text-soft);
   transition: transform var(--transition), color var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
-.socials a svg { width: 21px; height: 21px; }
+.socials a svg { width: 22px; height: 22px; }
 .socials a:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 .socials a[data-net="linkedin"]:hover  { color: var(--brand-linkedin); border-color: var(--brand-linkedin); }
 .socials a[data-net="github"]:hover    { color: var(--brand-github); border-color: var(--brand-github); }
@@ -272,7 +272,7 @@ section { padding: 56px 0; }
 }
 .skill:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 .skill b { display: flex; align-items: center; gap: 8px; font-size: 0.92rem; }
-.skill b svg, .skill b img { width: 18px; height: 18px; color: var(--primary); flex: 0 0 auto; }
+.skill b svg, .skill b img { width: 20px; height: 20px; color: var(--primary); flex: 0 0 auto; }
 .skill .bar { height: 8px; border-radius: 99px; background: var(--surface-muted); margin-top: 10px; overflow: hidden; }
 .skill .bar i { display: block; height: 100%; border-radius: 99px;
   background: linear-gradient(90deg, var(--primary), var(--accent)); }
@@ -295,7 +295,7 @@ section { padding: 56px 0; }
 .cert .ico { flex: 0 0 auto; width: 44px; height: 44px; border-radius: 12px;
   background: var(--primary-soft); color: var(--primary);
   display: inline-flex; align-items: center; justify-content: center; }
-.cert .ico svg, .cert .ico img { width: 24px; height: 24px; }
+.cert .ico svg, .cert .ico img { width: 26px; height: 26px; }
 .cert h4 { margin: 0 0 2px; font-size: 0.98rem; }
 .cert p { margin: 0; font-size: 0.85rem; color: var(--text-soft); }
 .cert .when { display: inline-block; margin-top: 6px; font-size: 0.76rem; font-weight: 700;
@@ -329,7 +329,7 @@ section { padding: 56px 0; }
   color: var(--accent); background: var(--accent-soft); padding: 3px 10px; border-radius: 999px; }
 .card .thumb { height: 130px; border-radius: var(--radius-sm); background: var(--surface-muted);
   display: flex; align-items: center; justify-content: center; overflow: hidden; }
-.card .thumb svg, .card .thumb img { width: 52%; height: 52%; color: var(--primary); object-fit: contain; }
+.card .thumb svg, .card .thumb img { width: 54%; height: 54%; color: var(--primary); object-fit: contain; }
 .card h3 { margin: 0; font-size: 1.08rem; }
 .card h3 a { color: var(--text); }
 .card h3 a:hover { color: var(--primary); }

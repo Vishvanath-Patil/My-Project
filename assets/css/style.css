@@ -272,7 +272,7 @@ section { padding: 56px 0; }
 }
 .skill:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 .skill b { display: flex; align-items: center; gap: 8px; font-size: 0.92rem; }
-.skill b svg, .skill b img { width: 18px; height: 18px; color: var(--primary); flex: 0 0 auto; }
+.skill b svg, .skill b img { width: 14px; height: 14px; color: var(--primary); flex: 0 0 auto; }
 .skill .bar { height: 8px; border-radius: 99px; background: var(--surface-muted); margin-top: 10px; overflow: hidden; }
 .skill .bar i { display: block; height: 100%; border-radius: 99px;
   background: linear-gradient(90deg, var(--primary), var(--accent)); }
@@ -329,7 +329,7 @@ section { padding: 56px 0; }
   color: var(--accent); background: var(--accent-soft); padding: 3px 10px; border-radius: 999px; }
 .card .thumb { height: 130px; border-radius: var(--radius-sm); background: var(--surface-muted);
   display: flex; align-items: center; justify-content: center; overflow: hidden; }
-.card .thumb svg, .card .thumb img { width: 52%; height: 52%; color: var(--primary); object-fit: contain; }
+.card .thumb svg, .card .thumb img { width: 40%; height: 40%; color: var(--primary); object-fit: contain; }
 .card h3 { margin: 0; font-size: 1.08rem; }
 .card h3 a { color: var(--text); }
 .card h3 a:hover { color: var(--primary); }

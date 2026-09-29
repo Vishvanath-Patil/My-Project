@@ -305,62 +305,90 @@ section { padding: 56px 0; }
 .cert .when { display: inline-block; margin-top: 6px; font-size: 0.76rem; font-weight: 700;
   color: var(--accent); background: var(--accent-soft); padding: 2px 10px; border-radius: 999px; }
 
-/* ---------- 10. Experience cards ---------- */
-.exp-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; align-items: start; }
-.exp-card {
-  position: relative; min-width: 0; background: var(--surface);
-  border: 1px solid var(--border); border-radius: var(--radius);
-  padding: 28px 30px;
-  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
-}
-/* subtle gradient hairline, revealed on hover */
-.exp-card::after {
-  content: ""; position: absolute; inset: -1px -1px auto -1px; height: 3px;
-  border-radius: var(--radius) var(--radius) 0 0;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  opacity: 0; transition: opacity var(--transition);
-}
-.exp-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md);
-  border-color: color-mix(in srgb, var(--primary) 40%, var(--border)); }
-.exp-card:hover::after { opacity: 1; }
+/* ---------- 10. Experience timeline ---------- */
+.exp-list { list-style: none; margin: 0; padding: 0; }
 
-.exp-top { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between;
-  gap: 10px 16px; margin-bottom: 16px; }
-.exp-role { margin: 0; font-size: clamp(1.15rem, 2.4vw, 1.35rem); letter-spacing: -0.01em; }
-.exp-company { margin: 3px 0 0; color: var(--primary); font-weight: 700; font-size: 0.98rem; }
-.exp-when {
-  flex: 0 0 auto; font-family: var(--font-mono); font-size: 0.82rem; font-weight: 700;
-  letter-spacing: 0.02em; color: var(--text); background: var(--surface-muted);
-  border: 1px solid var(--border); padding: 7px 14px; border-radius: 999px; white-space: nowrap;
-}
-.exp-card .chips { margin-bottom: 16px; }
+/* one career entry = connector rail + content (no row gap so the line reads continuously) */
+.exp-item { display: grid; grid-template-columns: 72px minmax(0, 1fr); }
+.exp-entry { max-width: 820px; padding-bottom: 56px; }
+.exp-item:last-child .exp-entry { padding-bottom: 0; }
 
-.exp-points { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px;
+/* subtle vertical connector rail */
+.exp-rail { position: relative; }
+.exp-rail::before {
+  content: ""; position: absolute; left: 50%; top: 0; bottom: 0;
+  width: 2px; transform: translateX(-50%); border-radius: 2px;
+  background: var(--border);
+}
+.exp-item:first-child .exp-rail::before { top: 8px; }
+.exp-item:last-child .exp-rail::before { bottom: auto; height: 14px; }
+.exp-node {
+  position: absolute; left: 50%; top: 6px; width: 14px; height: 14px;
+  transform: translateX(-50%); border-radius: 50%;
+  background: var(--bg-elevated); border: 2px solid var(--text-faint);
+}
+/* current role — slightly stronger node + subtle glow */
+.exp-item--current .exp-node {
+  background: var(--accent); border-color: var(--accent);
+  box-shadow: 0 0 0 5px var(--accent-soft), 0 0 16px var(--accent-soft);
+}
+
+/* header: company monogram + (role, company, dates/location) */
+.exp-head { display: flex; gap: 18px; align-items: flex-start; margin-bottom: 16px; }
+.exp-logo {
+  flex: 0 0 auto; width: 52px; height: 52px; border-radius: 14px;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 1.35rem; font-weight: 800; color: var(--primary);
+  background: var(--primary-soft);
+  border: 1px solid color-mix(in srgb, var(--primary) 28%, var(--border));
+}
+.exp-role {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 4px 10px;
+  margin: 0; font-size: clamp(1.15rem, 2.4vw, 1.4rem); letter-spacing: -0.01em;
+}
+.exp-tag {
+  display: inline-block; font-size: 0.66rem; font-weight: 800; letter-spacing: 0.09em;
+  text-transform: uppercase; white-space: nowrap;
+  color: var(--accent); background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  padding: 3px 10px; border-radius: 999px;
+}
+.exp-company { margin: 2px 0 0; font-size: 1rem; font-weight: 700; color: var(--primary); }
+.exp-meta { display: flex; flex-wrap: wrap; margin: 4px 0 0; font-size: 0.86rem; }
+.exp-when { font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700;
+  letter-spacing: 0.02em; color: var(--text-soft); white-space: nowrap; }
+.exp-when::after { content: "·"; margin: 0 8px; color: var(--text-faint); }
+.exp-where { color: var(--text-faint); }
+
+.exp-entry .chips { margin-bottom: 16px; }
+
+/* responsibilities — clean dot bullets */
+.exp-points { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px;
   font-size: 0.95rem; color: var(--text-soft); }
-.exp-points li { position: relative; padding-left: 20px; }
+.exp-points li { position: relative; padding-left: 1.15rem; }
 .exp-points li::before {
-  content: ""; position: absolute; left: 2px; top: 0.58em;
-  width: 7px; height: 7px; border-radius: 2px; background: var(--accent);
+  content: ""; position: absolute; left: 1px; top: 0.62em;
+  width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
 }
+
 /* award highlight */
-.exp-award {
-  display: flex; align-items: center; gap: 10px; margin-top: 4px;
+.exp-award { display: flex; align-items: center; gap: 10px; margin-top: 8px;
   padding: 10px 14px; color: var(--text);
-  background: var(--accent-soft); border-radius: var(--radius-sm);
-}
+  background: var(--accent-soft); border-radius: var(--radius-sm); }
 .exp-award::before { display: none; }
 .exp-award svg { flex: 0 0 auto; width: 16px; height: 16px; color: var(--accent); }
 
-@media (min-width: 900px) {
-  .exp-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .exp-card--lead { grid-column: 1 / -1; }
+/* responsive */
+@media (max-width: 900px) {
+  .exp-item { grid-template-columns: 54px minmax(0, 1fr); }
+  .exp-entry { padding-bottom: 46px; }
 }
 @media (max-width: 640px) {
-  .exp-card { padding: 22px 20px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .exp-card, .exp-card::after { transition: none; }
-  .exp-card:hover { transform: none; }
+  .exp-item { grid-template-columns: 32px minmax(0, 1fr); }
+  .exp-head { gap: 12px; margin-bottom: 14px; }
+  .exp-logo { width: 42px; height: 42px; border-radius: 12px; font-size: 1.1rem; }
+  .exp-role { font-size: clamp(1.08rem, 5.4vw, 1.25rem); }
+  .exp-entry { padding-bottom: 42px; }
 }
 
 /* ---------- 11. Cards (projects / products) ---------- */

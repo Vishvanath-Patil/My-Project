@@ -462,6 +462,7 @@ section { padding: 56px 0; }
 }
 .resume h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); letter-spacing: -0.01em; margin: 0 0 2px; }
 .resume .r-role { color: var(--primary); font-weight: 800; font-size: 1.05rem; margin-bottom: 2px; }
+.resume .r-open { color: var(--text-soft); font-weight: 700; font-size: 0.92rem; margin: 0 0 2px; }
 .resume .r-contact { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.86rem;
   color: var(--text-soft); border-top: 1px dashed var(--border); padding-top: 14px; margin-top: 14px; }
 .resume .r-contact a { color: var(--text-soft); }

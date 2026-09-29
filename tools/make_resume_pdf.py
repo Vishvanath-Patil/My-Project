@@ -68,6 +68,7 @@ def esc(s):
 
 """=========================== CONTENT (keep in sync with resume.html) =="""
 ROLE = "Sr. Cloud Engineer  ·  DevOps  ·  AWS  ·  Kubernetes  ·  Terraform"
+OPEN_TO = "Open to — Sr. DevOps · Cloud · SRE · Platform Engineer roles"
 CONTACT = ("Bengaluru, Karnataka, India  |  pvishva93@gmail.com  |  "
            "+91 92410 93877  |  linkedin.com/in/vishvanath-patil  |  "
            "github.com/Vishvanath-Patil")
@@ -142,9 +143,7 @@ CERTS = [
 ]
 
 EDUCATION = [
-    ("B.E. / Computer Engineering",
-     "Karnataka, India — Foundation for engineering, networking, and programming "
-     "fundamentals (detail available on request)."),
+    ("B.E., Computer Engineering", "Karnataka, India"),
 ]
 
 
@@ -302,7 +301,9 @@ def compose():
     d.text_at("Vishvanath Patil", 23, "HEB", "ink", LM)
     d.advance(21.5)
     d.text_at(ROLE, 10.8, "HEB", "blue", LM)
-    d.advance(14.5)
+    d.advance(12.5)
+    d.text_at(OPEN_TO, 9.4, "HEI", "soft", LM)
+    d.advance(11.5)
     d.para(CONTACT, size=9.2, color="soft", leading=12.6, space_after=6)
     d.rule(-4.0, CONTENT_W, 1.6, "blue")     # brand rule under the header
     d.advance(3)

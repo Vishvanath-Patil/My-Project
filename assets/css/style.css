@@ -305,20 +305,63 @@ section { padding: 56px 0; }
 .cert .when { display: inline-block; margin-top: 6px; font-size: 0.76rem; font-weight: 700;
   color: var(--accent); background: var(--accent-soft); padding: 2px 10px; border-radius: 999px; }
 
-/* ---------- 10. Experience timeline ---------- */
-.timeline { position: relative; margin: 0; padding: 0 0 0 26px; list-style: none; }
-.timeline::before { content: ""; position: absolute; left: 7px; top: 6px; bottom: 6px;
-  width: 2px; background: var(--border); border-radius: 2px; }
-.timeline li { position: relative; padding-bottom: 26px; }
-.timeline li::before { content: ""; position: absolute; left: -26px; top: 6px;
-  width: 16px; height: 16px; border-radius: 50%;
-  background: var(--surface); border: 3px solid var(--primary); }
-.timeline .tl-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
-.timeline h3 { margin: 0; font-size: 1.06rem; }
-.timeline .when { font-size: 0.8rem; color: var(--text-faint); font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
-.timeline .where { color: var(--primary); font-weight: 700; font-size: 0.95rem; margin: 2px 0 8px; }
-.timeline .tl-skills { color: var(--text-faint); font-size: 0.8rem; margin: 2px 0 8px; }
-.timeline ul { margin: 0; font-size: 0.95rem; color: var(--text-soft); }
+/* ---------- 10. Experience cards ---------- */
+.exp-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; align-items: start; }
+.exp-card {
+  position: relative; min-width: 0; background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 28px 30px;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+/* subtle gradient hairline, revealed on hover */
+.exp-card::after {
+  content: ""; position: absolute; inset: -1px -1px auto -1px; height: 3px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  opacity: 0; transition: opacity var(--transition);
+}
+.exp-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md);
+  border-color: color-mix(in srgb, var(--primary) 40%, var(--border)); }
+.exp-card:hover::after { opacity: 1; }
+
+.exp-top { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between;
+  gap: 10px 16px; margin-bottom: 16px; }
+.exp-role { margin: 0; font-size: clamp(1.15rem, 2.4vw, 1.35rem); letter-spacing: -0.01em; }
+.exp-company { margin: 3px 0 0; color: var(--primary); font-weight: 700; font-size: 0.98rem; }
+.exp-when {
+  flex: 0 0 auto; font-family: var(--font-mono); font-size: 0.82rem; font-weight: 700;
+  letter-spacing: 0.02em; color: var(--text); background: var(--surface-muted);
+  border: 1px solid var(--border); padding: 7px 14px; border-radius: 999px; white-space: nowrap;
+}
+.exp-card .chips { margin-bottom: 16px; }
+
+.exp-points { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px;
+  font-size: 0.95rem; color: var(--text-soft); }
+.exp-points li { position: relative; padding-left: 20px; }
+.exp-points li::before {
+  content: ""; position: absolute; left: 2px; top: 0.58em;
+  width: 7px; height: 7px; border-radius: 2px; background: var(--accent);
+}
+/* award highlight */
+.exp-award {
+  display: flex; align-items: center; gap: 10px; margin-top: 4px;
+  padding: 10px 14px; color: var(--text);
+  background: var(--accent-soft); border-radius: var(--radius-sm);
+}
+.exp-award::before { display: none; }
+.exp-award svg { flex: 0 0 auto; width: 16px; height: 16px; color: var(--accent); }
+
+@media (min-width: 900px) {
+  .exp-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .exp-card--lead { grid-column: 1 / -1; }
+}
+@media (max-width: 640px) {
+  .exp-card { padding: 22px 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .exp-card, .exp-card::after { transition: none; }
+  .exp-card:hover { transform: none; }
+}
 
 /* ---------- 11. Cards (projects / products) ---------- */
 .grid-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }

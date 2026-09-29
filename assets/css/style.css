@@ -335,16 +335,12 @@ section { padding: 56px 0; }
 
 /* header: company monogram + (role, company, dates/location) */
 .exp-head { display: flex; gap: 18px; align-items: flex-start; margin-bottom: 16px; }
-.exp-logo {
-  flex: 0 0 auto; width: 54px; height: 54px; border-radius: 12px;
-  display: inline-flex; align-items: center; justify-content: center;
-  background: #fff; overflow: hidden;
-  border: 1px solid var(--border);
-}
-.exp-logo img {
-  display: block; width: 100%; height: 100%; object-fit: contain;
-  padding: 8px; box-sizing: border-box;
-}
+/* company wordmark — no box, reads like part of the text block */
+.exp-logo { flex: 0 0 auto; display: inline-flex; align-items: center; margin-top: 4px; }
+.exp-logo img { display: block; width: auto; height: 24px; }
+.exp-logo img.exp-logo--dark { display: none; }
+[data-theme="dark"] .exp-logo img.exp-logo--dark { display: block; }
+[data-theme="dark"] .exp-logo img.exp-logo--light { display: none; }
 .exp-role {
   display: flex; align-items: center; flex-wrap: wrap; gap: 4px 10px;
   margin: 0; font-size: clamp(1.15rem, 2.4vw, 1.4rem); letter-spacing: -0.01em;
@@ -389,8 +385,7 @@ section { padding: 56px 0; }
 @media (max-width: 640px) {
   .exp-item { grid-template-columns: 32px minmax(0, 1fr); }
   .exp-head { gap: 12px; margin-bottom: 14px; }
-  .exp-logo { width: 46px; height: 46px; border-radius: 10px; }
-  .exp-logo img { padding: 7px; }
+  .exp-logo img { height: 20px; }
   .exp-role { font-size: clamp(1.08rem, 5.4vw, 1.25rem); }
   .exp-entry { padding-bottom: 42px; }
 }

@@ -194,6 +194,31 @@ function setupBackToTop() {
 }
 
 /* ------------------------------------------------------------
+   PROFILE PHOTO — uses the GitHub avatar by default
+   ------------------------------------------------------------ */
+function renderProfilePhoto() {
+  var badge = document.querySelector("[data-avatar]");
+  if (!badge) return; // only the homepage hero badge opts in
+
+  // derive the avatar URL from the GitHub social link (https://github.com/<user>.png)
+  var gh = siteConfig.socials && siteConfig.socials.github;
+  var user = gh && gh.url ? gh.url.replace(/^https?:\/\/github\.com\//i, "").split(/[?#]/)[0].replace(/\/+$/, "") : "";
+  if (!user) return; // keep the initials badge
+
+  var img = new Image();
+  img.className = "avatar-photo";
+  img.alt = siteConfig.name + " profile photo";
+  img.draggable = false;
+  img.onload = function () {
+    badge.textContent = "";
+    badge.appendChild(img); // photo loaded → swap out the initials
+  };
+  // on error (offline, blocked, …) leave the existing initials badge untouched
+  img.onerror = function () {};
+  img.src = "https://github.com/" + user + ".png";
+}
+
+/* ------------------------------------------------------------
    Init
    ------------------------------------------------------------ */
 document.addEventListener("DOMContentLoaded", function () {
@@ -203,4 +228,5 @@ document.addEventListener("DOMContentLoaded", function () {
   setupNav();
   setupYear();
   setupBackToTop();
+  renderProfilePhoto();
 });

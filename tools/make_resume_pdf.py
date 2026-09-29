@@ -67,12 +67,12 @@ def esc(s):
 
 
 """=========================== CONTENT (keep in sync with resume.html) =="""
-ROLE = "Senior Cloud Engineer  ·  DevOps  ·  AWS  ·  Kubernetes  ·  Terraform"
+ROLE = "Sr. Cloud Engineer  ·  DevOps  ·  AWS  ·  Kubernetes  ·  Terraform"
 CONTACT = ("Bengaluru, Karnataka, India  |  pvishva93@gmail.com  |  "
            "+91 92410 93877  |  linkedin.com/in/vishvanath-patil  |  "
            "github.com/Vishvanath-Patil")
 
-SUMMARY = ("Senior Cloud Engineer with 8+ years overall in IT infrastructure and 4+ years focused "
+SUMMARY = ("Sr. Cloud Engineer with 8+ years overall in IT infrastructure and 4+ years focused "
            "on DevOps & Cloud — designing, deploying, and operating resilient AWS infrastructure "
            "at fintech scale. AWS Certified Solutions Architect – Associate and RHCSA with "
            "hands-on expertise in Kubernetes (EKS), Terraform, CI/CD and GitOps (Jenkins, ArgoCD), "
@@ -81,7 +81,7 @@ SUMMARY = ("Senior Cloud Engineer with 8+ years overall in IT infrastructure and
 
 EXPERIENCE = [
     {
-        "role": "Sr Cloud Engineer", "company": "TerraPay",
+        "role": "Sr. Cloud Engineer", "company": "TerraPay",
         "meta": "Full-time · India (Hybrid)",
         "tags": "DevOps · Amazon Web Services (AWS)",
         "when": "Feb 2024 – Present",

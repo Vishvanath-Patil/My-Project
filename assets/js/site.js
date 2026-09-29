@@ -11,7 +11,7 @@
 var siteConfig = {
   name: "Vishvanath Patil",
   initials: "VP",
-  role: "Senior Cloud Engineer",
+  role: "Sr. Cloud Engineer",
   company: "TerraPay",
   companyUrl: "",               // ← optional company website (leave "" to hide link)
   location: "Bengaluru, Karnataka, India",
@@ -82,7 +82,7 @@ function renderSocials() {
    ------------------------------------------------------------ */
 var experience = [
   {
-    role: "Sr Cloud Engineer",
+    role: "Sr. Cloud Engineer",
     company: "TerraPay",
     where: "India · Hybrid",
     when: "Feb 2024 - Present",

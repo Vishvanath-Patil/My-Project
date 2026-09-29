@@ -32,9 +32,17 @@ var siteConfig = {
   stats: {
     years: "8+",          // overall IT infrastructure experience
     devopsYears: "4+",    // DevOps & Cloud focused years
-    repos: "117+",
-    certs: "6"
-  }
+    repos: "117+",        // static fallback — live count replaces this on load (GitHub API)
+    certs: "6"            // static fallback — replaced by certs.length on load
+  },
+  certs: [
+    { name: "AWS Certified Solutions Architect – Associate", issuer: "Amazon Web Services" },
+    { name: "Red Hat Certified System Administrator (RHCSA)", issuer: "Red Hat" },
+    { name: "Advanced Networking (CCNA)", issuer: "National Skill Development Corporation" },
+    { name: "Mastering SSL (TLS), Keys & Certificates", issuer: "Udemy" },
+    { name: "Sophos Firewall Engineer / Technician", issuer: "Sophos" },
+    { name: "Computer Hardware Professional", issuer: "National Skill Development Corporation" }
+  ]
 };
 
 /* ------------------------------------------------------------
@@ -225,6 +233,46 @@ function renderProfilePhoto() {
 }
 
 /* ------------------------------------------------------------
+   9. LIVE STATS — fresh repo & cert counts on every visit
+   Certs come from siteConfig.certs (single source of truth).
+   Repo count is fetched live from the GitHub API; if the fetch
+   fails (offline, rate limit, file://) the static fallback in the
+   markup stays put.
+   ------------------------------------------------------------ */
+function refreshStats() {
+  var set = function (key, value) {
+    document.querySelectorAll('[data-stat="' + key + '"]').forEach(function (el) {
+      el.textContent = value;
+    });
+    // keep the config in sync too, so anything reading siteConfig.stats sees the live value
+    if (siteConfig.stats && siteConfig.stats[key]) siteConfig.stats[key] = value;
+  };
+
+  // 1. certifications — always derivable, no network needed
+  if (siteConfig.certs && siteConfig.certs.length) {
+    set("certs", siteConfig.certs.length);
+  }
+
+  // 2. public repos — live from the GitHub user endpoint
+  var gh = siteConfig.socials && siteConfig.socials.github;
+  var user = gh && gh.url ? gh.url.replace(/^https?:\/\/github\.com\//i, "").split(/[?#]/)[0].replace(/\/+$/, "") : "";
+  if (!user) return;
+
+  var done = false;
+  var timer = setTimeout(function () { if (!done) fail(); }, 8000); // 8s safety net
+  function succeed(count) { if (done) return; done = true; clearTimeout(timer); set("repos", count + "+"); }
+  function fail() { done = true; clearTimeout(timer); } // fallback markup stays
+
+  fetch("https://api.github.com/users/" + encodeURIComponent(user), { cache: "no-store" })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (data) {
+      if (data && typeof data.public_repos === "number") succeed(data.public_repos);
+      else fail();
+    })
+    .catch(fail);
+}
+
+/* ------------------------------------------------------------
    Init
    ------------------------------------------------------------ */
 document.addEventListener("DOMContentLoaded", function () {
@@ -235,4 +283,5 @@ document.addEventListener("DOMContentLoaded", function () {
   setupYear();
   setupBackToTop();
   renderProfilePhoto();
+  refreshStats();
 });

@@ -80,10 +80,10 @@ Static text (about section, project cards, experience) lives directly in each `.
 career-portfolio/
   index.html        Home — hero, about, skills, certs, experience, featured projects
   resume.html       Digital resume (print-optimized)
-  products.html     Digital products / learning resources
+  products.html     Projects / open-source repos
   contact.html      Contact page
   404.html          Custom 404 (GitHub Pages)
-  robots.txt, favicon.svg
+  robots.txt, sitemap.xml, favicon.svg
   assets/
     css/style.css   Design system (light/dark, responsive, print)
     js/site.js      siteConfig + interactions

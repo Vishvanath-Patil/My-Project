@@ -4,9 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark light">
-  <title>Projects</title>
-  <meta name="description" content="Open-source projects by Vishvanath Patil — AWS microservices on ECS Fargate, CI/CD &amp; GitOps pipelines, Terraform, Kubernetes, and DevOps learning material, built in the open on GitHub.">
+  <title>Projects — Vishvanath Patil</title>
+  <meta name="description" content="Open-source cloud &amp; DevOps projects by Vishvanath Patil — AWS microservices on ECS Fargate, DevSecOps pipelines on EKS, Terraform IaC, GitOps, observability and FinOps automation, built in the open on GitHub.">
+  <meta name="author" content="Vishvanath Patil">
   <meta name="theme-color" content="#2f5fd0">
+  <link rel="canonical" href="https://Vishvanath-Patil.github.io/My-Project/products.html">
+
+  <meta property="og:title" content="Projects — Vishvanath Patil">
+  <meta property="og:description" content="AWS microservices on ECS Fargate, DevSecOps on EKS, Terraform IaC, GitOps, observability and FinOps automation — built in the open on GitHub.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://Vishvanath-Patil.github.io/My-Project/products.html">
+  <meta property="og:image" content="https://Vishvanath-Patil.github.io/My-Project/assets/img/og-cover.svg">
+
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -67,14 +76,17 @@
 
         <article class="card">
           <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
+            <span class="card-price">Open Source <small>· GitHub</small></span>
             <span class="card-tag">AWS · ECS</span>
           </div>
           <div class="thumb">
             <img src="assets/img/brand/aws.svg" alt="">
           </div>
           <h3><a href="https://github.com/Vishvanath-Patil/aws-ecs-fargate-microservices-deployment-project" target="_blank" rel="noopener">ECS Fargate Microservices</a></h3>
-          <p>Production-ready microservices deployed on AWS ECS Fargate — Docker, ECR, ALB, RDS PostgreSQL, Secrets Manager, VPC, NAT Gateway, and VPC Endpoints, wired end to end.</p>
+          <p>A web frontend plus four Python microservices and Postgres that run locally with Docker Compose, then deploy via CloudFormation to AWS ECS Fargate with RDS — ECR, ALB, VPC, NAT Gateway, Secrets Manager and VPC Endpoints wired end to end.</p>
+          <ul class="chips chips-sm" aria-label="Technologies">
+            <li>Docker Compose</li><li>ECR</li><li>ECS Fargate</li><li>CloudFormation</li><li>ALB</li><li>RDS</li><li>Secrets Manager</li><li>VPC</li>
+          </ul>
           <div class="link-row">
             <a href="https://github.com/Vishvanath-Patil/aws-ecs-fargate-microservices-deployment-project" target="_blank" rel="noopener">View on GitHub ↗</a>
           </div>
@@ -82,7 +94,7 @@
 
         <article class="card">
           <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
+            <span class="card-price">Open Source <small>· GitHub</small></span>
             <span class="card-tag">Linux · RHCSA</span>
           </div>
           <div class="thumb">
@@ -97,14 +109,17 @@
 
         <article class="card">
           <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
+            <span class="card-price">Open Source <small>· GitHub</small></span>
             <span class="card-tag">DevSecOps · EKS</span>
           </div>
           <div class="thumb">
             <img src="assets/img/brand/kubernetes.svg" alt="">
           </div>
           <h3><a href="https://github.com/Vishvanath-Patil/Jenkins-EKS-ECR-Argocd-Monitoring-Three-Tier-Project" target="_blank" rel="noopener">Three-Tier DevSecOps Project</a></h3>
-          <p>End-to-end three-tier application shipped through the full stack — Jenkins CI/CD to ECR and EKS, GitOps with ArgoCD, and Prometheus/Grafana monitoring on top.</p>
+          <p>An end-to-end three-tier application shipped through the full SDLC — Jenkins CI/CD with SonarQube and Trivy quality &amp; security gates, OWASP Dependency-Check, builds to ECR, GitOps delivery to EKS with ArgoCD, and Prometheus/Grafana monitoring on top.</p>
+          <ul class="chips chips-sm" aria-label="Technologies">
+            <li>EC2</li><li>Jenkins</li><li>SonarQube</li><li>Trivy</li><li>ECR</li><li>EKS</li><li>ArgoCD</li><li>Grafana</li>
+          </ul>
           <div class="link-row">
             <a href="https://github.com/Vishvanath-Patil/Jenkins-EKS-ECR-Argocd-Monitoring-Three-Tier-Project" target="_blank" rel="noopener">View on GitHub ↗</a>
           </div>
@@ -112,14 +127,17 @@
 
         <article class="card">
           <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
+            <span class="card-price">Open Source <small>· GitHub</small></span>
             <span class="card-tag">CI/CD · Observability</span>
           </div>
           <div class="thumb">
             <img src="assets/img/brand/prometheus.svg" alt="">
           </div>
           <h3><a href="https://github.com/Vishvanath-Patil/Sample-App-Deployment" target="_blank" rel="noopener">Sample App — Full Pipeline</a></h3>
-          <p>nginx deployed across the complete chain — Jenkins, ECR, EKS, ALB, Ingress, and Route 53 — with Prometheus, Loki &amp; Grafana providing end-to-end observability.</p>
+          <p>A containerized app delivered through the complete chain — Jenkins to ECR and EKS (via eksctl), ALB Ingress through the AWS Load Balancer Controller, Helm packaging and Route 53 — with Prometheus, Loki &amp; Grafana providing end-to-end observability.</p>
+          <ul class="chips chips-sm" aria-label="Technologies">
+            <li>Jenkins</li><li>EKS</li><li>eksctl</li><li>ALB Ingress</li><li>Helm</li><li>Route 53</li><li>Loki</li><li>Grafana</li>
+          </ul>
           <div class="link-row">
             <a href="https://github.com/Vishvanath-Patil/Sample-App-Deployment" target="_blank" rel="noopener">View on GitHub ↗</a>
           </div>
@@ -127,7 +145,7 @@
 
         <article class="card">
           <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
+            <span class="card-price">Open Source <small>· GitHub</small></span>
             <span class="card-tag">AWS · Learning</span>
           </div>
           <div class="thumb">
@@ -142,7 +160,7 @@
 
         <article class="card">
           <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
+            <span class="card-price">Open Source <small>· GitHub</small></span>
             <span class="card-tag">Architecture</span>
           </div>
           <div class="thumb">
@@ -157,7 +175,7 @@
 
         <article class="card">
           <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
+            <span class="card-price">Open Source <small>· GitHub</small></span>
             <span class="card-tag">Automation</span>
           </div>
           <div class="thumb">
@@ -172,14 +190,17 @@
 
         <article class="card">
           <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
+            <span class="card-price">Open Source <small>· GitHub</small></span>
             <span class="card-tag">Terraform · IaC</span>
           </div>
           <div class="thumb">
             <img src="assets/img/brand/terraform.svg" alt="">
           </div>
           <h3><a href="https://github.com/Vishvanath-Patil/Terraform-AWS-Project" target="_blank" rel="noopener">Terraform AWS Project</a></h3>
-          <p>Terraform infrastructure-as-code for AWS — VPCs, EC2, EKS, and supporting services, written to be reusable and reviewed like production code.</p>
+          <p>Reusable Terraform infrastructure-as-code for AWS — VPCs, EC2, EKS and supporting services, written to be reviewed and extended like production code.</p>
+          <ul class="chips chips-sm" aria-label="Technologies">
+            <li>Terraform</li><li>VPC</li><li>EC2</li><li>EKS</li><li>IaC</li>
+          </ul>
           <div class="link-row">
             <a href="https://github.com/Vishvanath-Patil/Terraform-AWS-Project" target="_blank" rel="noopener">View on GitHub ↗</a>
           </div>
@@ -187,7 +208,7 @@
 
         <article class="card">
           <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
+            <span class="card-price">Open Source <small>· GitHub</small></span>
             <span class="card-tag">Microservices</span>
           </div>
           <div class="thumb">
@@ -202,14 +223,17 @@
 
         <article class="card">
           <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
+            <span class="card-price">Open Source <small>· GitHub</small></span>
             <span class="card-tag">Security · IAM</span>
           </div>
           <div class="thumb">
             <img src="assets/img/brand/aws.svg" alt="">
           </div>
           <h3><a href="https://github.com/Vishvanath-Patil/IAM_Cross_Account_Access" target="_blank" rel="noopener">IAM Cross-Account Access</a></h3>
-          <p>Secure cross-account IAM patterns — granting scoped, auditable access between AWS accounts without sharing long-lived credentials.</p>
+          <p>Secure cross-account IAM patterns using STS AssumeRole and least-privilege policies — granting scoped, auditable access to a production S3 bucket between AWS accounts without sharing long-lived credentials.</p>
+          <ul class="chips chips-sm" aria-label="Technologies">
+            <li>IAM</li><li>STS AssumeRole</li><li>S3</li><li>Least privilege</li>
+          </ul>
           <div class="link-row">
             <a href="https://github.com/Vishvanath-Patil/IAM_Cross_Account_Access" target="_blank" rel="noopener">View on GitHub ↗</a>
           </div>
@@ -217,14 +241,17 @@
 
         <article class="card">
           <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
+            <span class="card-price">Open Source <small>· GitHub</small></span>
             <span class="card-tag">FinOps</span>
           </div>
           <div class="thumb">
             <img src="assets/img/brand/aws.svg" alt="">
           </div>
           <h3><a href="https://github.com/Vishvanath-Patil/AWS-Cost-Optimization-Tasks" target="_blank" rel="noopener">AWS Cost Optimization</a></h3>
-          <p>Hands-on AWS cost-optimization tasks — rightsizing, savings plans, spot usage, and budget-driven cleanup, with Python scripts included.</p>
+          <p>Serverless FinOps automation — Lambda functions and least-privilege IAM policies schedule stop/start of non-production EC2 instances outside business hours to cut the monthly bill.</p>
+          <ul class="chips chips-sm" aria-label="Technologies">
+            <li>Lambda</li><li>boto3</li><li>EC2</li><li>IAM</li><li>Cost optimization</li>
+          </ul>
           <div class="link-row">
             <a href="https://github.com/Vishvanath-Patil/AWS-Cost-Optimization-Tasks" target="_blank" rel="noopener">View on GitHub ↗</a>
           </div>
@@ -232,7 +259,7 @@
 
         <article class="card">
           <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
+            <span class="card-price">Open Source <small>· GitHub</small></span>
             <span class="card-tag">Interview Prep</span>
           </div>
           <div class="thumb">
@@ -247,7 +274,7 @@
 
         <article class="card">
           <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
+            <span class="card-price">Open Source <small>· GitHub</small></span>
             <span class="card-tag">DevSecOps · EKS</span>
           </div>
           <div class="thumb">
@@ -255,6 +282,9 @@
           </div>
           <h3><a href="https://github.com/Vishvanath-Patil/End-to-End-Kubernetes-DevSecOps-Tetris-Project" target="_blank" rel="noopener">Tetris DevSecOps Project</a></h3>
           <p>Hands-on DevSecOps project deploying a Tetris game on AWS EKS — Jenkins CI/CD, ArgoCD GitOps, Terraform IaC, Docker, Trivy scanning, and SonarQube code quality.</p>
+          <ul class="chips chips-sm" aria-label="Technologies">
+            <li>EKS</li><li>Jenkins</li><li>ArgoCD</li><li>Terraform</li><li>Docker</li><li>Trivy</li><li>SonarQube</li>
+          </ul>
           <div class="link-row">
             <a href="https://github.com/Vishvanath-Patil/End-to-End-Kubernetes-DevSecOps-Tetris-Project" target="_blank" rel="noopener">View on GitHub ↗</a>
           </div>
@@ -262,7 +292,7 @@
 
         <article class="card">
           <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
+            <span class="card-price">Open Source <small>· GitHub</small></span>
             <span class="card-tag">Kubernetes · Learning</span>
           </div>
           <div class="thumb">
@@ -277,7 +307,7 @@
 
         <article class="card">
           <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
+            <span class="card-price">Open Source <small>· GitHub</small></span>
             <span class="card-tag">End-to-End · AWS</span>
           </div>
           <div class="thumb">
@@ -292,7 +322,7 @@
 
         <article class="card">
           <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
+            <span class="card-price">Open Source <small>· GitHub</small></span>
             <span class="card-tag">Java · Spring Boot</span>
           </div>
           <div class="thumb">
@@ -307,7 +337,7 @@
 
         <article class="card">
           <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
+            <span class="card-price">Open Source <small>· GitHub</small></span>
             <span class="card-tag">CI/CD · Learning</span>
           </div>
           <div class="thumb">
@@ -322,7 +352,7 @@
 
         <article class="card">
           <div class="card-top">
-            <span class="card-price">Free <small>· GitHub</small></span>
+            <span class="card-price">Open Source <small>· GitHub</small></span>
             <span class="card-tag">AWS · Labs</span>
           </div>
           <div class="thumb">

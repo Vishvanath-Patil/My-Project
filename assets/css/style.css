@@ -14,7 +14,7 @@
   --border: #e3e6ef;
   --text: #1c2430;
   --text-soft: #4b5568;
-  --text-faint: #8494ac;
+  --text-faint: #6a7a92;   /* bumped for WCAG AA on light bg */
 
   --primary: #2f5fd0;
   --primary-ink: #1e3f8f;
@@ -56,7 +56,7 @@
   --border: #263247;
   --text: #eef1f7;
   --text-soft: #aab6c9;
-  --text-faint: #7e8ca3;
+  --text-faint: #94a4bd;   /* bumped for WCAG AA on dark bg */
 
   --primary: #7ea2ff;
   --primary-ink: #dfe8ff;
@@ -75,6 +75,16 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
 
 body {
   margin: 0;
@@ -219,6 +229,15 @@ section { padding: 56px 0; }
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .hero-sub { font-size: 1.12rem; color: var(--text-soft); max-width: 560px; }
+.hero-role {
+  font-size: clamp(1.2rem, 2.6vw, 1.5rem); font-weight: 800; letter-spacing: -0.01em;
+  color: var(--primary); margin: 0 0 6px;
+}
+.hero-stack {
+  font-family: var(--font-mono); font-size: 0.92rem; font-weight: 600;
+  color: var(--text-soft); margin: 0 0 16px;
+}
+.hero-stack .dot-sep { color: var(--accent); }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 22px; }
 .hero-quick { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
 .hero-quick li {
@@ -267,19 +286,18 @@ section { padding: 56px 0; }
 .about-facts li { display: flex; gap: 10px; align-items: flex-start; color: var(--text-soft); }
 .about-facts svg { width: 19px; height: 19px; color: var(--accent); flex: 0 0 auto; margin-top: 3px; }
 
-/* skills */
-.skill-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-@media (max-width: 640px) { .skill-grid { grid-template-columns: 1fr; } }
-.skill {
+/* skills — grouped by discipline */
+.skill-groups { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+@media (max-width: 640px) { .skill-groups { grid-template-columns: 1fr; } }
+.skill-group {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-  padding: 16px 18px; transition: transform var(--transition), box-shadow var(--transition);
+  padding: 16px 18px;
 }
-.skill:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
-.skill b { display: flex; align-items: center; gap: 8px; font-size: 0.92rem; }
-.skill b svg, .skill b img { width: 20px; height: 20px; color: var(--primary); flex: 0 0 auto; }
-.skill .bar { height: 8px; border-radius: 99px; background: var(--surface-muted); margin-top: 10px; overflow: hidden; }
-.skill .bar i { display: block; height: 100%; border-radius: 99px;
-  background: linear-gradient(90deg, var(--primary), var(--accent)); }
+.skill-group h3 {
+  display: flex; align-items: center; gap: 8px;
+  margin: 0 0 10px; font-size: 0.92rem; letter-spacing: -0.01em;
+}
+.skill-group h3 img, .skill-group h3 svg { width: 18px; height: 18px; color: var(--primary); flex: 0 0 auto; }
 
 /* chips (technologies) */
 .chips { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
@@ -287,6 +305,8 @@ section { padding: 56px 0; }
   font-size: 0.82rem; color: var(--text-soft); background: var(--surface);
   border: 1px solid var(--border); padding: 5px 12px; border-radius: 999px; font-weight: 600;
 }
+/* smaller variant for project cards */
+.chips-sm li { font-size: 0.74rem; padding: 3px 10px; }
 
 /* ---------- 9. Certs ---------- */
 .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px; }
@@ -418,8 +438,14 @@ section { padding: 56px 0; }
 .card .link-row { display: flex; gap: 14px; flex-wrap: wrap; font-weight: 700; font-size: 0.88rem; }
 .card .link-row a { display: inline-flex; gap: 6px; align-items: center; }
 .card .link-row svg { width: 15px; height: 15px; }
-.card-price { font-size: 1.2rem; font-weight: 800; color: var(--primary); }
-.card-price small { font-size: 0.75rem; color: var(--text-faint); font-weight: 600; }
+.card-price {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 0.72rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--primary); background: var(--primary-soft);
+  border: 1px solid color-mix(in srgb, var(--primary) 25%, transparent);
+  padding: 3px 10px; border-radius: 999px;
+}
+.card-price small { font-size: 0.68rem; color: var(--text-soft); font-weight: 700; }
 
 /* ---------- 12. Resume page ---------- */
 .toolbar { position: sticky; top: var(--nav-h); z-index: 50;
@@ -475,8 +501,14 @@ section { padding: 56px 0; }
   background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm);
   transition: border-color var(--transition), box-shadow var(--transition);
 }
-.field input:focus, .field textarea:focus {
+.field input:focus, .field textarea:focus, .field select:focus {
   outline: none; border-color: var(--primary); box-shadow: 0 0 0 4px var(--primary-soft);
+}
+.field select {
+  width: 100%; padding: 12px 14px; font: inherit; font-size: 0.96rem;
+  color: var(--text); background: var(--bg); border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition), box-shadow var(--transition);
 }
 .field textarea { resize: vertical; min-height: 130px; }
 

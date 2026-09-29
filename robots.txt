@@ -5,3 +5,6 @@ Allow: /
 # Keep the GitHub Pages debug fluff out of search results
 Disallow: /*.html?print=true
 Disallow: /assets/resume/
+
+# Where the site map lives
+Sitemap: https://Vishvanath-Patil.github.io/My-Project/sitemap.xml

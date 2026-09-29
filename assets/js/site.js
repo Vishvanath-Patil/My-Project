@@ -84,7 +84,7 @@ var experience = [
     company: "TerraPay",
     where: "India · Hybrid",
     when: "Feb 2024 - Present",
-    skills: ["DevOps", "Amazon Web Services (AWS)"],
+    skills: ["Kubernetes · EKS", "Terraform", "Jenkins", "ArgoCD", "GitOps", "Prometheus · Grafana · Loki", "IAM · KMS", "PCI-DSS"],
     points: [
       "Design and operate TerraPay's global money-movement platform on AWS — meeting 99.9%+ uptime on payment-critical infrastructure.",
       "Build and own CI/CD & GitOps pipelines (Jenkins, ArgoCD) powering zero-downtime releases across EKS clusters.",
@@ -99,7 +99,7 @@ var experience = [
     company: "Tata Consultancy Services",
     where: "Bangalore",
     when: "May 2022 - Feb 2024",
-    skills: ["Prometheus", "Kubernetes"],
+    skills: ["AWS", "Kubernetes · EKS", "ECS / Fargate", "ECR", "Jenkins", "SonarQube", "Trivy", "HashiCorp Vault", "ArgoCD"],
     points: [
       "Delivered end-to-end infrastructure projects across AWS: three-tier applications, Kubernetes (EKS) platforms, serverless, and containerized workloads on ECS/Fargate.",
       "Implemented complete DevSecOps pipelines — Jenkins, SonarQube, Trivy, HashiCorp Vault, and ArgoCD — shifting security left."
@@ -110,6 +110,7 @@ var experience = [
     company: "Alackrity Consols",
     where: "Bengaluru, Karnataka, India",
     when: "May 2018 - May 2022",
+    skills: ["Ansible", "Linux", "SSL/TLS", "TCP/IP", "Routing & Switching", "Sophos Firewall", "Bash"],
     points: [
       "Automated Linux systems administration, orchestration (Ansible), and SSL/TLS lifecycle management.",
       "Enterprise network operations — CCNA-level TCP/IP, routing & switching — and Sophos firewall management."

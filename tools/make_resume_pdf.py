@@ -72,11 +72,12 @@ CONTACT = ("Bengaluru, Karnataka, India  |  pvishva93@gmail.com  |  "
            "+91 92410 93877  |  linkedin.com/in/vishvanath-patil  |  "
            "github.com/Vishvanath-Patil")
 
-SUMMARY = ("Senior Cloud Engineer with 8+ years of experience designing, deploying, and operating "
-           "resilient AWS infrastructure at fintech scale. AWS Certified Solutions Architect – "
-           "Associate and RHCSA with hands-on expertise in Kubernetes (EKS), Terraform, CI/CD and "
-           "GitOps (Jenkins, ArgoCD), and DevSecOps. Passionate about reliability, security, "
-           "automation — and about teaching the next generation of cloud engineers.")
+SUMMARY = ("Senior Cloud Engineer with 8+ years overall in IT infrastructure and 4+ years focused "
+           "on DevOps & Cloud — designing, deploying, and operating resilient AWS infrastructure "
+           "at fintech scale. AWS Certified Solutions Architect – Associate and RHCSA with "
+           "hands-on expertise in Kubernetes (EKS), Terraform, CI/CD and GitOps (Jenkins, ArgoCD), "
+           "and DevSecOps. Passionate about reliability, security, automation — and about teaching "
+           "the next generation of cloud engineers.")
 
 EXPERIENCE = [
     {

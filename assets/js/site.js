@@ -16,10 +16,11 @@ var siteConfig = {
   companyUrl: "",               // ← optional company website (leave "" to hide link)
   location: "Bengaluru, Karnataka, India",
   summary:
-    "Cloud & DevOps engineer with 8+ years of experience designing, deploying, and " +
-    "operating resilient infrastructure on AWS. AWS Certified Solutions Architect and " +
-    "Red Hat Certified System Administrator building CI/CD pipelines, Kubernetes " +
-    "platforms, and GitOps workflows that ship fintech-scale systems with confidence.",
+    "Cloud & DevOps engineer with 8+ years overall in IT infrastructure and 4+ years " +
+    "focused on DevOps & Cloud — designing, deploying, and operating resilient " +
+    "infrastructure on AWS. AWS Certified Solutions Architect and Red Hat Certified " +
+    "System Administrator building CI/CD pipelines, Kubernetes platforms, and GitOps " +
+    "workflows that ship fintech-scale systems with confidence.",
   email: "pvishva93@gmail.com",
   phone: "+91 92410 93877",
   socials: {
@@ -29,7 +30,8 @@ var siteConfig = {
     youtube:   { url: "https://youtube.com/@VishvanathPatil",           label: "YouTube"   }  // ← ✏️ replace
   },
   stats: {
-    years: "8+",
+    years: "8+",          // overall IT infrastructure experience
+    devopsYears: "4+",    // DevOps & Cloud focused years
     repos: "117+",
     certs: "6"
   }

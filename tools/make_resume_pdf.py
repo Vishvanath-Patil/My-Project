@@ -121,9 +121,10 @@ SKILLS = [
      "AWS (EC2, VPC, EKS, ECS/Fargate, ECR, RDS, IAM, KMS, Lambda), Terraform, Helm, Ansible, Docker"),
     ("CI/CD & DevSecOps",
      "Jenkins, ArgoCD / GitOps, SonarQube, Trivy, OWASP Dependency-Check, HashiCorp Vault"),
+    ("Version Control & Tools", "GitHub, GitLab, Bitbucket, VS Code"),
     ("Observability", "Prometheus, Grafana, Loki, CloudWatch, Alerting & runbooks"),
     ("OS & Networking",
-     "Linux (RHEL/Rocky), Bash, SSL/TLS, TCP/IP, CCNA-level networking, Sophos firewall"),
+     "Linux (RHEL/Rocky), Bash, SSL/TLS, TCP/IP, CCNA-level networking, Site-to-Site VPN, Sophos firewall"),
     ("Application Dev", "Python, Java (Spring Boot), React + TypeScript basics"),
 ]
 

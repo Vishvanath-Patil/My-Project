@@ -92,6 +92,7 @@ career-portfolio/
     resume/Resume.pdf
   tools/
     make_resume_pdf.py   Regenerates the placeholder Resume.pdf (stdlib-only)
+    check_site.py        Consistency checker: nav/footer sync, single-edit-point contact info, resume 3-way sync, sitemap coverage (stdlib-only)
 ```
 
 ## 5. Tech notes (for the curious)

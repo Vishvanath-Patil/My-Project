@@ -12,6 +12,7 @@ There is no build, test, or lint toolchain. To develop:
 
 - Preview locally: double-click `index.html`, or `python -m http.server` from the repo root for a nicer preview.
 - Regenerate the downloadable resume PDF: `python3 tools/make_resume_pdf.py` (stdlib-only, writes the styled A4 `assets/resume/Resume.pdf` that every "Download PDF" button serves).
+- Check the site's invariants: `python3 tools/check_site.py` (stdlib-only). Verifies the hand-duplicated nav/footer are still identical across pages, that email/phone/location/WhatsApp live only in `site.js`, that resume.html ↔ Resume.pdf (make_resume_pdf.py) ↔ site.js stay in sync, and that sitemap/robots cover the served pages. Run it after touching any shared markup or personal details.
 - Deploy: push to GitHub Pages (repo `Vishvanath-Patil/My-Project`, branch `master`, source `/ (root)`). See README §2.
 
 ## Architecture

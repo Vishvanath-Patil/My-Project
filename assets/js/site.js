@@ -26,8 +26,8 @@ var siteConfig = {
   socials: {
     linkedin:  { url: "https://www.linkedin.com/in/vishvanath-patil/",  label: "LinkedIn"  },
     github:    { url: "https://github.com/Vishvanath-Patil",            label: "GitHub"    },
-    instagram: { url: "https://instagram.com/vishvanath.patil",         label: "Instagram" }, // ← ✏️ replace
-    youtube:   { url: "https://youtube.com/@VishvanathPatil",           label: "YouTube"   }  // ← ✏️ replace
+    instagram: { url: "https://instagram.com/vishvanath.patil",         label: "Instagram" },
+    youtube:   { url: "https://youtube.com/@VishvanathPatil",           label: "YouTube"   }
   },
   stats: {
     years: "8+",          // overall IT infrastructure experience
@@ -139,6 +139,40 @@ function feedPage() {
   // brand in nav + footer
   document.querySelectorAll("[data-brand-name]").forEach(function (el) {
     el.textContent = siteConfig.name;
+  });
+}
+
+/* ------------------------------------------------------------
+   5b. CONTACT INFO FEED-IN — single edit point for email / phone /
+       location / WhatsApp. Fill the data-email / data-phone /
+       data-location / data-wa hooks so personal details live only
+       in siteConfig above, never pasted into the HTML.
+       - Leaf elements (no child svg) with empty text get the value
+         as their label too — so `data-email` on an empty <a> both
+         links and displays the address, while `data-email` on a
+         button that already says "Email" just wires the href.
+   ------------------------------------------------------------ */
+function feedContact() {
+  var email = siteConfig.email || "";
+  var phone = siteConfig.phone || "";
+  var digits = phone.replace(/\D/g, "");
+
+  var fill = function (sel, value, hrefFor) {
+    document.querySelectorAll(sel).forEach(function (el) {
+      if (hrefFor) el.setAttribute("href", hrefFor(value));
+      if (!el.textContent.trim() && !el.querySelector("svg")) el.textContent = value;
+    });
+  };
+
+  fill("[data-email]", email, function (v) { return "mailto:" + v; });
+  fill("[data-phone]", phone, function (v) { return "tel:+" + digits; });
+  fill("[data-location]", siteConfig.location || "", null);
+
+  document.querySelectorAll("[data-wa]").forEach(function (el) {
+    var msg = encodeURIComponent(
+      el.getAttribute("data-wa") || "Hi Vishvanath, I came across your portfolio.");
+    el.setAttribute("href", "https://wa.me/" + digits + "?text=" + msg);
+    if (!el.textContent.trim() && !el.querySelector("svg")) el.textContent = phone;
   });
 }
 
@@ -289,6 +323,7 @@ function refreshStats() {
 document.addEventListener("DOMContentLoaded", function () {
   renderSocials();
   feedPage();
+  feedContact();
   setupTheme();
   setupNav();
   setupYear();

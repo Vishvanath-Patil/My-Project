@@ -74,7 +74,9 @@
 /* ---------- 2. Reset / base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%;
+       /* keep anchored sections & the skip link clear of the fixed nav */
+       scroll-padding-top: calc(var(--nav-h) + 12px); }
 
 /* Respect users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
@@ -467,6 +469,10 @@ section { padding: 56px 0; }
   color: var(--text-soft); border-top: 1px dashed var(--border); padding-top: 14px; margin-top: 14px; }
 .resume .r-contact a { color: var(--text-soft); }
 .resume .r-contact a:hover { color: var(--primary); }
+/* brand icons in the resume contact line: keep LinkedIn blue, keep the GitHub
+   glyph visible in dark mode (the stock #24292f disappears on dark surfaces) */
+.resume .r-contact svg.ic-r-github { fill: #24292f; }
+[data-theme="dark"] .resume .r-contact svg.ic-r-github { fill: #e2e5ea; }
 .resume section { padding: 22px 0 0; }
 .resume h2 { font-size: 1.02rem; text-transform: uppercase; letter-spacing: 0.11em;
   color: var(--primary); border-bottom: 2px solid var(--primary-soft); padding-bottom: 6px; margin-bottom: 16px; }

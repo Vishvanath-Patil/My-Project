@@ -93,120 +93,58 @@
     <!-- ======================= HERO ======================= -->
     <section class="hero">
       <div class="wrap hero-grid">
-        <div class="hero-copy">
+        <div>
           <span class="hero-eyebrow"><span class="dot"></span> Open to Sr. DevOps / Cloud / SRE / Platform roles</span>
           <h1>I keep fintech money moving on <span class="grad">AWS</span>.</h1>
           <p class="hero-role">Vishvanath Patil — Sr. Cloud &amp; DevOps Engineer</p>
-          <p class="hero-stack">AWS · Kubernetes · Terraform · GitOps · Observability</p>
-          <p class="hero-sub">I design and operate the AWS platform that moves cross-border payments at TerraPay — Kubernetes, Terraform, and GitOps run for 99.9%+ uptime.</p>
+          <p class="hero-stack">AWS <span class="dot-sep">·</span> Kubernetes <span class="dot-sep">·</span> Terraform <span class="dot-sep">·</span> CI/CD <span class="dot-sep">·</span> GitOps <span class="dot-sep">·</span> Observability</p>
+          <p class="hero-sub">I design, automate, and operate secure, reliable AWS infrastructure — building Kubernetes platforms, Terraform IaC, and GitOps pipelines that keep fintech systems running at 99.9%+ uptime.</p>
 
           <div class="hero-cta">
-            <a class="btn btn-primary" href="#projects">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="12" y1="3" x2="12" y2="21"/><polyline points="6 15 12 21 18 15"/></svg>
-              See the work
+            <a class="btn btn-primary" href="assets/resume/Resume.pdf" download="Vishvanath-Patil-Resume.pdf">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Resume (PDF)
             </a>
             <a class="btn btn-ghost" href="contact.html">Contact me</a>
           </div>
-          <p class="hero-aside">Prefer email? <a href="mailto:pvishva93@gmail.com">pvishva93@gmail.com</a> · or <a href="assets/resume/Resume.pdf" download="Vishvanath-Patil-Resume.pdf">grab the PDF resume ↗</a></p>
+
+          <ul class="hero-quick">
+            <li><img src="assets/img/brand/aws.svg" alt="">AWS</li>
+            <li><img src="assets/img/brand/kubernetes.svg" alt="">Kubernetes</li>
+            <li><img src="assets/img/brand/docker.svg" alt="">Docker</li>
+            <li><img src="assets/img/brand/terraform.svg" alt="">Terraform</li>
+            <li><img src="assets/img/brand/jenkins.svg" alt="">CI/CD</li>
+            <li><img src="assets/img/brand/trivy.svg" alt="">DevSecOps</li>
+            <li><img src="assets/img/brand/redhat.svg" alt="">RHCSA</li>
+          </ul>
         </div>
 
-        <!-- hero art: live release-flow panel -->
+        <!-- hero art: profile card -->
         <div class="hero-art">
-          <div class="pipe-card">
-            <div class="pipe-top">
-              <span class="pipe-dot pipe-dot--a" aria-hidden="true"></span>
-              <span class="pipe-dot pipe-dot--b" aria-hidden="true"></span>
-              <span class="pipe-dot pipe-dot--c" aria-hidden="true"></span>
-              <span class="pipe-title">release-flow.terraform</span>
+          <div class="hero-card">
+            <div class="card-top">
+              <span class="card-tag">Cloud · DevOps · Fintech</span>
             </div>
-            <div class="pipe-body">
-              <svg class="pipe-svg" viewBox="0 0 400 346" role="img" aria-label="Release pipeline diagram: code from git is built in Jenkins, stored in Amazon ECR, deployed to an EKS cluster by ArgoCD GitOps, and served to the payment API. The platform runs at 99.9%+ uptime under PCI-DSS, earned across 4+ years of DevOps work.">
-                <defs>
-                  <marker id="pipe-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-                    <path class="pipe-arrow" d="M0 0 L10 5 L0 10 z"/>
-                  </marker>
-                </defs>
+            <div style="display:flex; align-items:center; gap:16px; margin-top:14px;">
+              <span data-avatar style="flex:0 0 auto; width:64px; height:64px; border-radius:16px; background:var(--primary-soft); color:var(--primary); display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:1.3rem;">VP</span>
+              <div>
+                <h3>Vishvanath Patil</h3>
+                <p class="who">Sr. Cloud &amp; DevOps Engineer · TerraPay</p>
+              </div>
+            </div>
 
-                <!-- connectors -->
-                <g fill="none">
-                  <path class="pipe-flow" d="M166 27 L234 77" marker-end="url(#pipe-arrow)"/>
-                  <path class="pipe-flow" d="M309 92 L166 127" marker-end="url(#pipe-arrow)"/>
-                  <path class="pipe-flow" d="M166 127 L234 177" marker-end="url(#pipe-arrow)"/>
-                  <path class="pipe-flow" d="M309 192 L166 227" marker-end="url(#pipe-arrow)"/>
-                  <path class="pipe-flow" d="M166 227 L234 277" marker-end="url(#pipe-arrow)"/>
-                </g>
+            <div class="card-stats">
+              <div class="card-stat"><b>8+</b><span>years overall</span></div>
+              <div class="card-stat"><b>4+</b><span>DevOps · Cloud</span></div>
+              <div class="card-stat"><b data-stat="repos">117+</b><span>public repos</span></div>
+              <div class="card-stat"><b data-stat="certs">6</b><span>certifications</span></div>
+            </div>
 
-                <!-- glow behind the EKS node -->
-                <rect class="pipe-glow" x="6" y="202" width="170" height="40" rx="12"/>
+            <ul class="socials" data-socials="mail" style="margin-bottom:18px;"></ul>
 
-                <!-- step 1: git · code -->
-                <g class="pipe-node">
-                  <rect class="pipe-box" x="16" y="12" width="150" height="30" rx="9"/>
-                  <circle cx="31" cy="27" r="9"/>
-                  <text x="31" y="30" text-anchor="middle">1</text>
-                  <text class="pipe-label" x="46" y="30">git · code</text>
-                </g>
-
-                <!-- step 2: jenkins · build -->
-                <g class="pipe-node">
-                  <rect class="pipe-box" x="234" y="62" width="150" height="30" rx="9"/>
-                  <circle cx="249" cy="77" r="9"/>
-                  <text x="249" y="80" text-anchor="middle">2</text>
-                  <text class="pipe-label" x="264" y="80">jenkins · build</text>
-                </g>
-
-                <!-- step 3: ecr · registry -->
-                <g class="pipe-node">
-                  <rect class="pipe-box" x="16" y="112" width="150" height="30" rx="9"/>
-                  <circle cx="31" cy="127" r="9"/>
-                  <text x="31" y="130" text-anchor="middle">3</text>
-                  <text class="pipe-label" x="46" y="130">ecr · registry</text>
-                </g>
-
-                <!-- step 4: argocd · gitops -->
-                <g class="pipe-node">
-                  <rect class="pipe-box" x="234" y="162" width="150" height="30" rx="9"/>
-                  <circle cx="249" cy="177" r="9"/>
-                  <text x="249" y="180" text-anchor="middle">4</text>
-                  <text class="pipe-label" x="264" y="180">argocd · gitops</text>
-                </g>
-
-                <!-- step 5: eks · 3 az -->
-                <g class="pipe-node">
-                  <rect class="pipe-box" x="16" y="212" width="150" height="30" rx="9"/>
-                  <circle cx="31" cy="227" r="9"/>
-                  <text x="31" y="230" text-anchor="middle">5</text>
-                  <text class="pipe-label" x="46" y="230">eks · 3 az</text>
-                </g>
-
-                <!-- step 6: payment api -->
-                <g class="pipe-node">
-                  <rect class="pipe-box" x="234" y="262" width="150" height="30" rx="9"/>
-                  <circle cx="249" cy="277" r="9"/>
-                  <text x="249" y="280" text-anchor="middle">6</text>
-                  <text class="pipe-label" x="264" y="280">payment api</text>
-                </g>
-
-                <!-- AWS badge -->
-                <g class="pipe-badge">
-                  <rect x="342" y="12" width="46" height="24" rx="7"/>
-                  <text x="365" y="28" text-anchor="middle">AWS</text>
-                </g>
-
-                <!-- proof chips -->
-                <g class="pipe-chip pipe-chip--ok">
-                  <rect x="8" y="304" width="110" height="26" rx="8"/>
-                  <text x="63" y="320" text-anchor="middle">99.9%+ uptime</text>
-                </g>
-                <g class="pipe-chip pipe-chip--primary">
-                  <rect x="134" y="304" width="110" height="26" rx="8"/>
-                  <text x="189" y="320" text-anchor="middle">PCI-DSS</text>
-                </g>
-                <g class="pipe-chip pipe-chip--primary">
-                  <rect x="258" y="304" width="110" height="26" rx="8"/>
-                  <text x="313" y="320" text-anchor="middle">4+ yrs DevOps</text>
-                </g>
-              </svg>
+            <div class="card-actions">
+              <a class="btn btn-primary btn-sm" href="resume.html">View Resume</a>
+              <a class="btn btn-ghost btn-sm" href="contact.html">Contact me</a>
             </div>
           </div>
         </div>

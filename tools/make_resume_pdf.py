@@ -69,9 +69,11 @@ def esc(s):
 """=========================== CONTENT (keep in sync with resume.html) =="""
 ROLE = "Sr. Cloud & DevOps Engineer  ·  AWS  ·  Kubernetes  ·  Terraform"
 OPEN_TO = "Open to — Sr. DevOps · Cloud · SRE · Platform Engineer roles"
-CONTACT = ("Bengaluru, Karnataka, India  |  pvishva93@gmail.com  |  "
-           "+91 92410 93877  |  linkedin.com/in/vishvanath-patil  |  "
-           "github.com/Vishvanath-Patil")
+# Contact split into two centred header lines so LinkedIn + GitHub share a clean
+# row with no dangling "|" separator. Same facts as resume.html.
+CONTACT_MAIN = ("Bengaluru, Karnataka, India   |   pvishva93@gmail.com   |   "
+                "+91 92410 93877")
+CONTACT_SOCIAL = "linkedin.com/in/vishvanath-patil   ·   github.com/Vishvanath-Patil"
 
 SUMMARY = ("Sr. Cloud Engineer with 8+ years overall in IT infrastructure and 4+ years focused "
            "on DevOps & Cloud — designing, deploying, and operating resilient AWS infrastructure "
@@ -208,37 +210,41 @@ class Doc:
         self.advance(space_after)
 
     def section(self, title):
-        self.ensure(34)
+        # The under-rule sits ~3.5pt below the heading baseline — clearly under
+        # the capital letters (which end at the baseline), never through text.
+        # The 16pt drop after it keeps the first content line clear as well.
+        self.ensure(26)
         self.advance(8)
-        self.text_at(title.upper(), 11.2, "HEB", "blue", LM)
-        self.rule(-3.0, CONTENT_W, 1.1, "blueSoft")
-        self.advance(14)
+        self.text_at(title.upper(), 11.0, "HEB", "blue", LM)
+        self.rule(-3.5, CONTENT_W, 1.2, "blueSoft")
+        self.advance(16)
 
     def experience(self, e):
         title = "%s — %s" % (e["role"], e["company"])
         when = e["when"]
-        date_w = w_pt(when, 9.2, "HEL")
+        date_w = w_pt(when, 9.1, "HEL")
         right_x = PAGE_W - LM - date_w
         budget = CONTENT_W - date_w - 14
-        if w_pt(title, 10.6, "HEB") <= budget:
-            self.ensure(15.2)
-            self.text_at(when, 9.2, "HEL", "soft", right_x)
-            self.text_at(title, 10.6, "HEB", "ink", LM)
-            self.advance(15.2)
+        lead = 14.2   # role + company baseline, then right-aligned date on same line
+        if w_pt(title, 10.4, "HEB") <= budget:
+            self.ensure(lead)
+            self.text_at(when, 9.1, "HEL", "soft", right_x)
+            self.text_at(title, 10.4, "HEB", "ink", LM)
+            self.advance(lead)
         else:
-            for i, ln in enumerate(self.wrap(title, 10.6, "HEB", budget)):
-                self.ensure(15.2)
-                self.text_at(ln, 10.6, "HEB", "ink", LM)
+            for i, ln in enumerate(self.wrap(title, 10.4, "HEB", budget)):
+                self.ensure(lead)
+                self.text_at(ln, 10.4, "HEB", "ink", LM)
                 if i == 0:
-                    self.text_at(when, 9.2, "HEL", "soft", right_x)
-                self.advance(15.2)
+                    self.text_at(when, 9.1, "HEL", "soft", right_x)
+                self.advance(lead)
         sub = "  |  ".join(x for x in (e.get("meta", ""), e.get("tags", "")) if x)
         if sub:
-            self.para(sub, size=8.8, color="faint", leading=11.2, space_after=3.0)
+            self.para(sub, size=8.7, color="faint", leading=10.8, space_after=2.4)
         for pt in e["points"]:
-            self.para(pt, size=9.4, leading=12.3, hang=12, bullet="•",
-                      space_after=0.8)
-        self.advance(2.5)
+            self.para(pt, size=9.5, leading=11.8, hang=12, bullet="•",
+                      space_after=0.5)
+        self.advance(1.75)
 
     def named(self, name, detail):
         self.para(name, size=9.6, font="HEB", color="ink", leading=12.4, space_after=0)
@@ -251,8 +257,8 @@ class Doc:
     def grid2(self, items, gap=26.0):
         """Two-column layout for (name, detail) pairs — mirrors .r-grid2."""
         col_w = (CONTENT_W - gap) / 2.0
-        pad = 6.0
-        n_size, d_size, n_lead, d_lead = 9.6, 8.9, 12.4, 11.0
+        pad = 4.0
+        n_size, d_size, n_lead, d_lead = 9.5, 8.9, 11.6, 10.4
 
         def rows(item):
             name, detail = item
@@ -297,16 +303,24 @@ class Doc:
 
 def compose():
     d = Doc()
-    # Header
+    # Header — name, role, open-to, then a two-line centred contact block
+    # (LinkedIn + GitHub on their own clean row, no trailing "|").
     d.text_at("Vishvanath Patil", 23, "HEB", "ink", LM)
-    d.advance(21.5)
+    d.advance(20)
     d.text_at(ROLE, 10.8, "HEB", "blue", LM)
-    d.advance(12.5)
+    d.advance(11.0)
     d.text_at(OPEN_TO, 9.4, "HEI", "soft", LM)
-    d.advance(11.5)
-    d.para(CONTACT, size=9.2, color="soft", leading=12.6, space_after=6)
-    d.rule(-4.0, CONTENT_W, 1.6, "blue")     # brand rule under the header
-    d.advance(3)
+    d.advance(10.0)
+    d.text_at(CONTACT_MAIN, 9.0, "HEL", "soft",
+              LM + (CONTENT_W - w_pt(CONTACT_MAIN, 9.0)) / 2.0)
+    d.advance(12.0)
+    d.text_at(CONTACT_SOCIAL, 9.0, "HEL", "soft",
+              LM + (CONTENT_W - w_pt(CONTACT_SOCIAL, 9.0)) / 2.0)
+    d.advance(3.0)
+    # Brand rule directly under the contact block — 4pt below its baseline, so it
+    # sits in the header whitespace and never touches the first section heading.
+    d.rule(-4.0, CONTENT_W, 1.6, "blue")
+    d.advance(8.0)
 
     # Sections
     d.section("Summary")

@@ -7,4 +7,4 @@ Disallow: /*.html?print=true
 Disallow: /assets/resume/
 
 # Where the site map lives
-Sitemap: https://Vishvanath-Patil.github.io/My-Project/sitemap.xml
+Sitemap: https://vishvanath-patil.github.io/My-Project/sitemap.xml

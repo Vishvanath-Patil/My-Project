@@ -11,7 +11,7 @@
 var siteConfig = {
   name: "Vishvanath Patil",
   initials: "VP",
-  role: "Sr. Cloud Engineer",
+  role: "Sr. Cloud & DevOps Engineer",
   company: "TerraPay",
   companyUrl: "",               // ← optional company website (leave "" to hide link)
   location: "Bengaluru, Karnataka, India",
@@ -151,6 +151,7 @@ function setupTheme() {
 
   var apply = function (theme) {
     document.documentElement.setAttribute("data-theme", theme);
+    toggle.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
     try { localStorage.setItem("theme", theme); } catch (e) {}
   };
 
@@ -211,24 +212,34 @@ function renderProfilePhoto() {
   var badges = document.querySelectorAll("[data-avatar]");
   if (!badges.length) return; // pages without the badge opt out
 
-  // derive the avatar URL from the GitHub social link (https://github.com/<user>.png)
+  // Local photo wins (drop one at assets/img/profile.jpg); otherwise fall back
+  // to the GitHub avatar derived from the social link (github.com/<user>.png).
+  // On error (no local file, offline, blocked, …) the fallback markup stays put.
+  var srcs = ["assets/img/profile.jpg"];
   var gh = siteConfig.socials && siteConfig.socials.github;
   var user = gh && gh.url ? gh.url.replace(/^https?:\/\/github\.com\//i, "").split(/[?#]/)[0].replace(/\/+$/, "") : "";
-  if (!user) return; // keep the fallback markup
+  if (user) srcs.push("https://github.com/" + user + ".png");
 
   badges.forEach(function (badge) {
-    var img = new Image();
-    img.className = "avatar-photo";
-    img.alt = siteConfig.name + " profile photo";
-    img.draggable = false;
-    img.onload = function () {
-      badge.textContent = "";
-      badge.appendChild(img); // photo loaded → swap out the placeholder markup
-      badge.classList.add("is-loaded");
+    var loaded = false;
+    var idx = 0;
+    var trySource = function () {
+      if (loaded || idx >= srcs.length) return;
+      var img = new Image();
+      img.className = "avatar-photo";
+      img.alt = siteConfig.name + " profile photo";
+      img.draggable = false;
+      img.onload = function () {
+        if (loaded) return;
+        loaded = true;
+        badge.textContent = "";
+        badge.appendChild(img); // photo loaded → swap out the placeholder markup
+        badge.classList.add("is-loaded");
+      };
+      img.onerror = function () { idx += 1; trySource(); };
+      img.src = srcs[idx];
     };
-    // on error (offline, blocked, …) leave the fallback markup untouched
-    img.onerror = function () {};
-    img.src = "https://github.com/" + user + ".png";
+    trySource();
   });
 }
 

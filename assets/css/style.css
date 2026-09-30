@@ -309,7 +309,7 @@ section { padding: 56px 0; }
 .chips-sm li { font-size: 0.74rem; padding: 3px 10px; }
 
 /* ---------- 9. Certs ---------- */
-.cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px; }
+.cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr)); gap: 14px; }
 .cert {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
   padding: 18px; display: flex; gap: 14px; align-items: flex-start;
@@ -418,7 +418,7 @@ section { padding: 56px 0; }
 }
 
 /* ---------- 11. Cards (projects / products) ---------- */
-.grid-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+.grid-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 20px; }
 .card {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
   padding: 22px; display: flex; flex-direction: column; gap: 12px;

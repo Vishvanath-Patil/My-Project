@@ -67,7 +67,7 @@ def esc(s):
 
 
 """=========================== CONTENT (keep in sync with resume.html) =="""
-ROLE = "Sr. Cloud Engineer  ·  DevOps  ·  AWS  ·  Kubernetes  ·  Terraform"
+ROLE = "Sr. Cloud & DevOps Engineer  ·  AWS  ·  Kubernetes  ·  Terraform"
 OPEN_TO = "Open to — Sr. DevOps · Cloud · SRE · Platform Engineer roles"
 CONTACT = ("Bengaluru, Karnataka, India  |  pvishva93@gmail.com  |  "
            "+91 92410 93877  |  linkedin.com/in/vishvanath-patil  |  "

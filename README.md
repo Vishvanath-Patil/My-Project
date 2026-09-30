@@ -34,7 +34,7 @@ Every asset uses a relative path, so the site works straight from `file://`.
    - Branch: `master`, folder: `/ (root)` → **Save**
 4. Wait ~1 minute. Your site is live at:
 
-   **`https://Vishvanath-Patil.github.io/My-Project/`**
+   **`https://vishvanath-patil.github.io/My-Project/`**
 
 5. Want your own subdomain later? A `CNAME` file with your domain + DNS record turns it into `https://vishvanath.dev/`.
 
@@ -70,7 +70,8 @@ Static text (about section, project cards, experience) lives directly in each `.
 
 ### Favicon & images
 - `favicon.svg` is hand-drawn; replace if you want.
-- Hero art and product thumbnails in `assets/img/` are inline SVGs — swap them for your own photos (`assets/img/profile.jpg`) and update the `<img>` tags if you wish.
+- Hero art and product thumbnails in `assets/img/` are inline SVGs — swap them for your own photos if you wish.
+- Profile photo: drop a real headshot at **`assets/img/profile.jpg`** and every `data-avatar` badge uses it automatically (nav + hero card). Without that file the site falls back to the GitHub avatar; without a network it stays a monogram.
 
 ---
 
@@ -87,7 +88,7 @@ career-portfolio/
   assets/
     css/style.css   Design system (light/dark, responsive, print)
     js/site.js      siteConfig + interactions
-    img/            Hand-drawn SVG art (incl. og-cover for social sharing)
+    img/            Hand-drawn SVG art (incl. og-cover source + rendered og-cover.png for social sharing)
     resume/Resume.pdf
   tools/
     make_resume_pdf.py   Regenerates the placeholder Resume.pdf (stdlib-only)

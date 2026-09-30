@@ -101,16 +101,12 @@
           <p class="hero-sub">I design, automate, and operate secure, reliable AWS infrastructure — building Kubernetes platforms, Terraform IaC, and GitOps pipelines that keep fintech systems running at 99.9%+ uptime.</p>
 
           <div class="hero-cta">
-            <a class="btn btn-primary" href="#projects">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="12" y1="3" x2="12" y2="21"/><polyline points="6 15 12 21 18 15"/></svg>
-              See the work
-            </a>
-            <a class="btn btn-ghost" href="assets/resume/Resume.pdf" download="Vishvanath-Patil-Resume.pdf">
+            <a class="btn btn-primary" href="assets/resume/Resume.pdf" download="Vishvanath-Patil-Resume.pdf">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-              Resume (PDF)
+              Download Resume (PDF)
             </a>
+            <a class="btn btn-ghost" href="contact.html">Contact me</a>
           </div>
-          <p class="hero-aside">Prefer email? <a href="mailto:pvishva93@gmail.com">pvishva93@gmail.com</a> · or <a href="contact.html">contact me</a>.</p>
 
           <ul class="hero-quick">
             <li><img src="assets/img/brand/aws.svg" alt="">AWS</li>
@@ -123,97 +119,33 @@
           </ul>
         </div>
 
-        <!-- hero art: production pipeline diagram -->
+        <!-- hero art: profile card -->
         <div class="hero-art">
-          <div class="pipe-card">
-            <p class="pipe-cap">how I ship releases · git → production</p>
-            <svg class="pipe-svg" viewBox="0 0 400 346" role="img" aria-label="Diagram of the deployment pipeline: code from git is built in Jenkins, stored in Amazon ECR, deployed to an EKS cluster by ArgoCD GitOps, and served to the payment API. Supporting stack — the arc runs on 99.9% uptime, PCI-DSS compliance and 4+ years of DevOps experience." focusable="false">
-              <defs>
-                <marker id="pipe-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-                  <path class="pipe-arrow" d="M0 0 L10 5 L0 10 z"/>
-                </marker>
-              </defs>
+          <div class="hero-card">
+            <div class="card-top">
+              <span class="card-tag">Cloud · DevOps · Fintech</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:16px; margin-top:14px;">
+              <span data-avatar style="flex:0 0 auto; width:64px; height:64px; border-radius:16px; background:var(--primary-soft); color:var(--primary); display:inline-flex; align-items:center; justify-content:center; font-weight:800; font-size:1.3rem;">VP</span>
+              <div>
+                <h3>Vishvanath Patil</h3>
+                <p class="who">Sr. Cloud &amp; DevOps Engineer · TerraPay</p>
+              </div>
+            </div>
 
-              <!-- connectors -->
-              <g fill="none">
-                <path class="pipe-flow" d="M166 27 L234 77" marker-end="url(#pipe-arrow)"/>
-                <path class="pipe-flow" d="M309 92 L166 127" marker-end="url(#pipe-arrow)"/>
-                <path class="pipe-flow" d="M166 127 L234 177" marker-end="url(#pipe-arrow)"/>
-                <path class="pipe-flow" d="M309 192 L166 227" marker-end="url(#pipe-arrow)"/>
-                <path class="pipe-flow" d="M166 227 L234 277" marker-end="url(#pipe-arrow)"/>
-              </g>
+            <div class="card-stats">
+              <div class="card-stat"><b>8+</b><span>years overall</span></div>
+              <div class="card-stat"><b>4+</b><span>DevOps · Cloud</span></div>
+              <div class="card-stat"><b data-stat="repos">117+</b><span>public repos</span></div>
+              <div class="card-stat"><b data-stat="certs">6</b><span>certifications</span></div>
+            </div>
 
-              <!-- grow-glow behind the EKS node -->
-              <rect class="pipe-glow" x="6" y="202" width="170" height="40" rx="12"/>
+            <ul class="socials" data-socials="mail" style="margin-bottom:18px;"></ul>
 
-              <!-- node: git · code -->
-              <g class="pipe-node">
-                <rect class="pipe-box" x="16" y="12" width="150" height="30" rx="9"/>
-                <circle cx="31" cy="27" r="9"/>
-                <text x="31" y="30" text-anchor="middle">1</text>
-                <text class="pipe-label" x="46" y="30">git · code</text>
-              </g>
-
-              <!-- node: jenkins · build -->
-              <g class="pipe-node">
-                <rect class="pipe-box" x="234" y="62" width="150" height="30" rx="9"/>
-                <circle cx="249" cy="77" r="9"/>
-                <text x="249" y="80" text-anchor="middle">2</text>
-                <text class="pipe-label" x="264" y="80">jenkins · build</text>
-              </g>
-
-              <!-- node: ecr · registry -->
-              <g class="pipe-node">
-                <rect class="pipe-box" x="16" y="112" width="150" height="30" rx="9"/>
-                <circle cx="31" cy="127" r="9"/>
-                <text x="31" y="130" text-anchor="middle">3</text>
-                <text class="pipe-label" x="46" y="130">ecr · registry</text>
-              </g>
-
-              <!-- node: argocd · gitops -->
-              <g class="pipe-node">
-                <rect class="pipe-box" x="234" y="162" width="150" height="30" rx="9"/>
-                <circle cx="249" cy="177" r="9"/>
-                <text x="249" y="180" text-anchor="middle">4</text>
-                <text class="pipe-label" x="264" y="180">argocd · gitops</text>
-              </g>
-
-              <!-- node: eks · 3 az -->
-              <g class="pipe-node">
-                <rect class="pipe-box" x="16" y="212" width="150" height="30" rx="9"/>
-                <circle cx="31" cy="227" r="9"/>
-                <text x="31" y="230" text-anchor="middle">5</text>
-                <text class="pipe-label" x="46" y="230">eks · 3 az</text>
-              </g>
-
-              <!-- node: payment api -->
-              <g class="pipe-node">
-                <rect class="pipe-box" x="234" y="262" width="150" height="30" rx="9"/>
-                <circle cx="249" cy="277" r="9"/>
-                <text x="249" y="280" text-anchor="middle">6</text>
-                <text class="pipe-label" x="264" y="280">payment api</text>
-              </g>
-
-              <!-- AWS badge -->
-              <g class="pipe-badge">
-                <rect x="342" y="12" width="46" height="24" rx="7"/>
-                <text x="365" y="28" text-anchor="middle">AWS</text>
-              </g>
-
-              <!-- proof chips -->
-              <g class="pipe-chip">
-                <rect x="8" y="304" width="110" height="26" rx="13"/>
-                <text x="63" y="320" text-anchor="middle">99.9%+ uptime</text>
-              </g>
-              <g class="pipe-chip">
-                <rect x="134" y="304" width="110" height="26" rx="13"/>
-                <text x="189" y="320" text-anchor="middle">PCI-DSS</text>
-              </g>
-              <g class="pipe-chip">
-                <rect x="258" y="304" width="110" height="26" rx="13"/>
-                <text x="313" y="320" text-anchor="middle">4+ yrs DevOps</text>
-              </g>
-            </svg>
+            <div class="card-actions">
+              <a class="btn btn-primary btn-sm" href="resume.html">View Resume</a>
+              <a class="btn btn-ghost btn-sm" href="contact.html">Contact me</a>
+            </div>
           </div>
         </div>
       </div>
@@ -413,10 +345,10 @@
                 <li>PCI-DSS</li>
               </ul>
               <ul class="exp-points">
-                <li>Own AWS infrastructure for TerraPay's global money-movement platform — delivering a 99.9%+ uptime track record on payment-critical systems.</li>
-                <li>Run CI/CD &amp; GitOps end to end — Jenkins and ArgoCD ship zero-downtime releases across production EKS clusters, with Git-driven rollbacks.</li>
-                <li>Codify AWS with Terraform and harden the account — VPC, IAM, security groups, KMS — to PCI-DSS and fintech compliance.</li>
-                <li>Operate the observability stack (Prometheus, Grafana, Loki) with runbook-driven alerting — cutting alert noise and mean-time-to-recovery.</li>
+                <li>Design and operate TerraPay's global money-movement platform on AWS — meeting 99.9%+ uptime on payment-critical infrastructure.</li>
+                <li>Own CI/CD &amp; GitOps pipelines (Jenkins, ArgoCD) powering zero-downtime releases across EKS clusters.</li>
+                <li>Automate cloud provisioning with Terraform and harden the AWS environment — IAM, VPC, security groups, KMS — in line with PCI-DSS and fintech compliance.</li>
+                <li>Drive observability with Prometheus, Grafana, and Loki to keep MTTR low and alert noise down.</li>
                 <li>Mentor engineers and conduct technical interviews to grow the platform team.</li>
                 <li class="exp-award">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -451,8 +383,8 @@
                 <li>ArgoCD</li>
               </ul>
               <ul class="exp-points">
-                <li>Delivered end-to-end AWS builds — three-tier applications, EKS platforms, serverless, and ECS/Fargate workloads.</li>
-                <li>Shipped complete DevSecOps pipelines (Jenkins, SonarQube, Trivy, HashiCorp Vault, ArgoCD), shifting security left in the SDLC.</li>
+                <li>Delivered end-to-end AWS projects: three-tier applications, EKS platforms, serverless, and containerized workloads on ECS/Fargate.</li>
+                <li>Implemented end-to-end DevSecOps pipelines — Jenkins, SonarQube, Trivy, Vault, ArgoCD — shifting security left.</li>
               </ul>
             </article>
           </li>
@@ -480,8 +412,8 @@
                 <li>Bash</li>
               </ul>
               <ul class="exp-points">
-                <li>Automated Linux administration and SSL/TLS certificate lifecycle management with Ansible.</li>
-                <li>Ran enterprise network operations — CCNA-level TCP/IP, routing &amp; switching — and Sophos firewall management.</li>
+                <li>Automated Linux administration and orchestration (Ansible) and SSL/TLS certificate lifecycle management.</li>
+                <li>Enterprise network operations — CCNA-level TCP/IP, routing &amp; switching — and Sophos firewall management.</li>
               </ul>
             </article>
           </li>
@@ -553,18 +485,18 @@
 
           <article class="card">
             <div class="card-top">
-                <span class="card-tag">DevSecOps · EKS</span>
+                <span class="card-tag">Terraform · IaC</span>
             </div>
             <div class="thumb">
-              <img src="assets/img/brand/trivy.svg" alt="" loading="lazy" decoding="async">
+              <img src="assets/img/brand/terraform.svg" alt="" loading="lazy" decoding="async">
             </div>
-            <h3><a href="https://github.com/Vishvanath-Patil/End-to-End-Kubernetes-DevSecOps-Tetris-Project" target="_blank" rel="noopener">Tetris DevSecOps Project</a></h3>
-            <p>Hands-on DevSecOps project deploying a Tetris game on AWS EKS — Jenkins CI/CD, ArgoCD GitOps, Terraform IaC, Docker, Trivy scanning, and SonarQube code quality.</p>
+            <h3><a href="https://github.com/Vishvanath-Patil/Terraform-AWS-Project" target="_blank" rel="noopener">Terraform AWS Project</a></h3>
+            <p>Reusable Terraform infrastructure-as-code for AWS — VPCs, EC2, EKS and supporting services, written to be reviewed and extended like production code.</p>
             <ul class="chips chips-sm" aria-label="Technologies">
-              <li>EKS</li><li>Jenkins</li><li>ArgoCD</li><li>Terraform</li><li>Docker</li><li>Trivy</li><li>SonarQube</li>
+              <li>Terraform</li><li>VPC</li><li>EC2</li><li>EKS</li><li>IaC</li>
             </ul>
             <div class="link-row">
-              <a href="https://github.com/Vishvanath-Patil/End-to-End-Kubernetes-DevSecOps-Tetris-Project" target="_blank" rel="noopener">View on GitHub ↗</a>
+              <a href="https://github.com/Vishvanath-Patil/Terraform-AWS-Project" target="_blank" rel="noopener">View on GitHub ↗</a>
             </div>
           </article>
 
@@ -587,18 +519,18 @@
 
           <article class="card">
             <div class="card-top">
-                <span class="card-tag">Security · IAM</span>
+                <span class="card-tag">Linux · RHCSA</span>
             </div>
             <div class="thumb">
-              <img src="assets/img/brand/aws.svg" alt="" loading="lazy" decoding="async">
+              <img src="assets/img/brand/redhat.svg" alt="" loading="lazy" decoding="async">
             </div>
-            <h3><a href="https://github.com/Vishvanath-Patil/IAM_Cross_Account_Access" target="_blank" rel="noopener">IAM Cross-Account Access</a></h3>
-            <p>Secure cross-account IAM patterns using STS AssumeRole and least-privilege policies — granting scoped, auditable access to a production S3 bucket between AWS accounts without sharing long-lived credentials.</p>
+            <h3><a href="https://github.com/Vishvanath-Patil/RHCSA-9_EX200" target="_blank" rel="noopener">RHCSA-9 (EX200) Study Kit</a></h3>
+            <p>Comprehensive study notes and practice dumps for the Red Hat EX200 exam — every objective covered, from user management to SELinux and shell scripting.</p>
             <ul class="chips chips-sm" aria-label="Technologies">
-              <li>IAM</li><li>STS AssumeRole</li><li>S3</li><li>Least privilege</li>
+              <li>RHEL</li><li>SELinux</li><li>Bash</li><li>System administration</li>
             </ul>
             <div class="link-row">
-              <a href="https://github.com/Vishvanath-Patil/IAM_Cross_Account_Access" target="_blank" rel="noopener">View on GitHub ↗</a>
+              <a href="https://github.com/Vishvanath-Patil/RHCSA-9_EX200" target="_blank" rel="noopener">View on GitHub ↗</a>
             </div>
           </article>
 

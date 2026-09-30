@@ -4,28 +4,25 @@
 << /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R 4 0 R 5 0 R] /Count 3 >>
+<< /Type /Pages /Kids [3 0 R 4 0 R] /Count 2 >>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 6 0 R /F2 7 0 R /F3 8 0 R >> >> /Contents 9 0 R >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R /F2 6 0 R /F3 7 0 R >> >> /Contents 8 0 R >>
 endobj
 4 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 6 0 R /F2 7 0 R /F3 8 0 R >> >> /Contents 10 0 R >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R /F2 6 0 R /F3 7 0 R >> >> /Contents 9 0 R >>
 endobj
 5 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 6 0 R /F2 7 0 R /F3 8 0 R >> >> /Contents 11 0 R >>
-endobj
-6 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
 endobj
-7 0 obj
+6 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
 endobj
-8 0 obj
+7 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
 endobj
-9 0 obj
-<< /Length 7988 >>
+8 0 obj
+<< /Length 8562 >>
 stream
 BT /F2 23 Tf 0.110 0.141 0.188 rg 1 0 0 1 52.00 788.00 Tm (Vishvanath Patil) Tj ET
 BT /F2 10.8 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 766.50 Tm (Sr. Cloud & DevOps Engineer  ·  AWS  ·  Kubernetes  ·  Terraform) Tj ET
@@ -46,107 +43,97 @@ BT /F1 9.2 Tf 0.290 0.330 0.410 rg 1 0 0 1 462.20 596.30 Tm (Feb 2024 – Present)
 BT /F2 10.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 52.00 596.30 Tm (Sr. Cloud Engineer — TerraPay) Tj ET
 BT /F1 8.8 Tf 0.520 0.580 0.670 rg 1 0 0 1 52.00 581.10 Tm (Full-time · India \(Hybrid\) | DevOps · Amazon Web Services \(AWS\)) Tj ET
 BT /F1 9.4 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 566.90 Tm (•) Tj ET
-BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 566.90 Tm (Own AWS infrastructure for TerraPay's global money-movement platform — delivering a 99.9%+ uptime track) Tj ET
-BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 554.60 Tm (record on payment-critical systems.) Tj ET
+BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 566.90 Tm (Design and operate TerraPay's global money-movement platform on AWS — meeting 99.9%+ uptime on) Tj ET
+BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 554.60 Tm (payment-critical infrastructure.) Tj ET
 BT /F1 9.4 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 541.50 Tm (•) Tj ET
-BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 541.50 Tm (Run CI/CD & GitOps end to end — Jenkins and ArgoCD ship zero-downtime releases across production EKS) Tj ET
-BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 529.20 Tm (clusters, with Git-driven rollbacks.) Tj ET
-BT /F1 9.4 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 516.10 Tm (•) Tj ET
-BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 516.10 Tm (Codify AWS with Terraform and harden the account — VPC, IAM, security groups, KMS — to PCI-DSS and fintech) Tj ET
-BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 503.80 Tm (compliance.) Tj ET
-BT /F1 9.4 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 490.70 Tm (•) Tj ET
-BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 490.70 Tm (Operate the observability stack \(Prometheus, Grafana, Loki\) with runbook-driven alerting — cutting alert noise and) Tj ET
-BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 478.40 Tm (mean-time-to-recovery.) Tj ET
-BT /F1 9.4 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 465.30 Tm (•) Tj ET
-BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 465.30 Tm (Mentor engineers and conduct technical interviews to grow the platform team.) Tj ET
-BT /F1 9.4 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 452.20 Tm (•) Tj ET
-BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 452.20 Tm (Recognized with TerraPay's Superlative Performance Award.) Tj ET
-BT /F1 9.2 Tf 0.290 0.330 0.410 rg 1 0 0 1 453.50 436.60 Tm (May 2022 – Feb 2024) Tj ET
-BT /F2 10.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 52.00 436.60 Tm (DevOps Engineer — Tata Consultancy Services) Tj ET
-BT /F1 8.8 Tf 0.520 0.580 0.670 rg 1 0 0 1 52.00 421.40 Tm (Full-time · Bangalore | Prometheus · Kubernetes) Tj ET
-BT /F1 9.4 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 407.20 Tm (•) Tj ET
-BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 407.20 Tm (Delivered end-to-end AWS builds — three-tier applications, EKS platforms, serverless, and ECS/Fargate) Tj ET
-BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 394.90 Tm (workloads.) Tj ET
-BT /F1 9.4 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 381.80 Tm (•) Tj ET
-BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 381.80 Tm (Shipped complete DevSecOps pipelines \(Jenkins, SonarQube, Trivy, HashiCorp Vault, ArgoCD\), shifting security) Tj ET
-BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 369.50 Tm (left in the SDLC.) Tj ET
-BT /F1 9.2 Tf 0.290 0.330 0.410 rg 1 0 0 1 451.98 353.90 Tm (May 2018 – May 2022) Tj ET
-BT /F2 10.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 52.00 353.90 Tm (Network Engineer — Alackrity Consols) Tj ET
-BT /F1 8.8 Tf 0.520 0.580 0.670 rg 1 0 0 1 52.00 338.70 Tm (Full-time · Bengaluru, Karnataka, India) Tj ET
-BT /F1 9.4 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 324.50 Tm (•) Tj ET
-BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 324.50 Tm (Automated Linux administration and SSL/TLS certificate lifecycle management with Ansible.) Tj ET
-BT /F1 9.4 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 311.40 Tm (•) Tj ET
-BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 311.40 Tm (Ran enterprise network operations — CCNA-level TCP/IP, routing & switching — and Sophos firewall) Tj ET
-BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 299.10 Tm (management.) Tj ET
-BT /F2 11.2 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 275.50 Tm (SKILLS) Tj ET
-0.780 0.820 0.930 rg 52.00 272.50 491.00 1.10 re f
-BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 52.00 261.50 Tm (Cloud & Infrastructure) Tj ET
-BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 62.00 249.10 Tm (AWS \(EC2, VPC, EKS, ECS/Fargate, ECR, RDS, IAM,) Tj ET
-BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 62.00 238.10 Tm (KMS, Lambda\), Terraform, Helm, Ansible, Docker) Tj ET
-BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 52.00 221.10 Tm (CI/CD & DevSecOps) Tj ET
-BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 62.00 208.70 Tm (Jenkins, ArgoCD / GitOps, SonarQube, Trivy, OWASP) Tj ET
-BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 62.00 197.70 Tm (Dependency-Check, HashiCorp Vault) Tj ET
-BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 52.00 180.70 Tm (Version Control & Tools) Tj ET
-BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 62.00 168.30 Tm (GitHub, GitLab, Bitbucket, VS Code) Tj ET
-BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 310.50 261.50 Tm (Observability) Tj ET
-BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 320.50 249.10 Tm (Prometheus, Grafana, Loki, CloudWatch, Alerting &) Tj ET
-BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 320.50 238.10 Tm (runbooks) Tj ET
-BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 310.50 221.10 Tm (OS & Networking) Tj ET
-BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 320.50 208.70 Tm (Linux \(RHEL/Rocky\), Bash, SSL/TLS, TCP/IP,) Tj ET
-BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 320.50 197.70 Tm (CCNA-level networking, Site-to-Site VPN, Sophos) Tj ET
-BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 320.50 186.70 Tm (firewall) Tj ET
-BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 310.50 169.70 Tm (Application Dev) Tj ET
-BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 320.50 157.30 Tm (Python, Java \(Spring Boot\), React + TypeScript basics) Tj ET
-BT /F2 11.2 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 132.30 Tm (CERTIFICATIONS) Tj ET
-0.780 0.820 0.930 rg 52.00 129.30 491.00 1.10 re f
-BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 52.00 118.30 Tm (AWS Certified Solutions Architect – Associate) Tj ET
-BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 62.00 105.90 Tm (Amazon Web Services · Oct 2023 – Oct 2026) Tj ET
-BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 52.00 88.90 Tm (Red Hat Certified System Administrator \(RHCSA\)) Tj ET
-BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 62.00 76.50 Tm (Red Hat · EX200 · Dec 2024 – Dec 2027) Tj ET
+BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 541.50 Tm (Build and own CI/CD & GitOps pipelines \(Jenkins, ArgoCD\) for zero-downtime releases across EKS clusters.) Tj ET
+BT /F1 9.4 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 528.40 Tm (•) Tj ET
+BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 528.40 Tm (Automate provisioning with Terraform and harden the AWS environment \(IAM, VPC, security groups, KMS\) for) Tj ET
+BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 516.10 Tm (PCI-DSS & fintech compliance.) Tj ET
+BT /F1 9.4 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 503.00 Tm (•) Tj ET
+BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 503.00 Tm (Drive observability with Prometheus, Grafana, and Loki to reduce alert noise and MTTR.) Tj ET
+BT /F1 9.4 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 489.90 Tm (•) Tj ET
+BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 489.90 Tm (Mentor engineers, conduct technical interviews, and represent the platform team's reliability culture.) Tj ET
+BT /F1 9.4 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 476.80 Tm (•) Tj ET
+BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 476.80 Tm (Recognized with TerraPay's Superlative Performance Award.) Tj ET
+BT /F1 9.2 Tf 0.290 0.330 0.410 rg 1 0 0 1 453.50 461.20 Tm (May 2022 – Feb 2024) Tj ET
+BT /F2 10.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 52.00 461.20 Tm (DevOps Engineer — Tata Consultancy Services) Tj ET
+BT /F1 8.8 Tf 0.520 0.580 0.670 rg 1 0 0 1 52.00 446.00 Tm (Full-time · Bangalore | Prometheus · Kubernetes) Tj ET
+BT /F1 9.4 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 431.80 Tm (•) Tj ET
+BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 431.80 Tm (Delivered end-to-end AWS projects — three-tier applications, EKS platforms, serverless, and ECS/Fargate) Tj ET
+BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 419.50 Tm (workloads.) Tj ET
+BT /F1 9.4 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 406.40 Tm (•) Tj ET
+BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 406.40 Tm (Implemented complete DevSecOps pipelines \(Jenkins, SonarQube, Trivy, Vault, ArgoCD\), shifting security left in) Tj ET
+BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 394.10 Tm (the SDLC.) Tj ET
+BT /F1 9.2 Tf 0.290 0.330 0.410 rg 1 0 0 1 451.98 378.50 Tm (May 2018 – May 2022) Tj ET
+BT /F2 10.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 52.00 378.50 Tm (Network Engineer — Alackrity Consols) Tj ET
+BT /F1 8.8 Tf 0.520 0.580 0.670 rg 1 0 0 1 52.00 363.30 Tm (Full-time · Bengaluru, Karnataka, India) Tj ET
+BT /F1 9.4 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 349.10 Tm (•) Tj ET
+BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 349.10 Tm (Automated Linux systems administration, Ansible orchestration, and SSL/TLS certificate lifecycle management.) Tj ET
+BT /F1 9.4 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 336.00 Tm (•) Tj ET
+BT /F1 9.4 Tf 0.200 0.240 0.310 rg 1 0 0 1 64.00 336.00 Tm (Enterprise network operations — CCNA-level TCP/IP, routing & switching — and Sophos firewall management.) Tj ET
+BT /F2 11.2 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 312.40 Tm (SKILLS) Tj ET
+0.780 0.820 0.930 rg 52.00 309.40 491.00 1.10 re f
+BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 52.00 298.40 Tm (Cloud & Infrastructure) Tj ET
+BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 62.00 286.00 Tm (AWS \(EC2, VPC, EKS, ECS/Fargate, ECR, RDS, IAM,) Tj ET
+BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 62.00 275.00 Tm (KMS, Lambda\), Terraform, Helm, Ansible, Docker) Tj ET
+BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 52.00 258.00 Tm (CI/CD & DevSecOps) Tj ET
+BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 62.00 245.60 Tm (Jenkins, ArgoCD / GitOps, SonarQube, Trivy, OWASP) Tj ET
+BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 62.00 234.60 Tm (Dependency-Check, HashiCorp Vault) Tj ET
+BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 52.00 217.60 Tm (Version Control & Tools) Tj ET
+BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 62.00 205.20 Tm (GitHub, GitLab, Bitbucket, VS Code) Tj ET
+BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 310.50 298.40 Tm (Observability) Tj ET
+BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 320.50 286.00 Tm (Prometheus, Grafana, Loki, CloudWatch, Alerting &) Tj ET
+BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 320.50 275.00 Tm (runbooks) Tj ET
+BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 310.50 258.00 Tm (OS & Networking) Tj ET
+BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 320.50 245.60 Tm (Linux \(RHEL/Rocky\), Bash, SSL/TLS, TCP/IP,) Tj ET
+BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 320.50 234.60 Tm (CCNA-level networking, Site-to-Site VPN, Sophos) Tj ET
+BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 320.50 223.60 Tm (firewall) Tj ET
+BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 310.50 206.60 Tm (Application Dev) Tj ET
+BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 320.50 194.20 Tm (Python, Java \(Spring Boot\), React + TypeScript basics) Tj ET
+BT /F2 11.2 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 169.20 Tm (CERTIFICATIONS) Tj ET
+0.780 0.820 0.930 rg 52.00 166.20 491.00 1.10 re f
+BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 52.00 155.20 Tm (AWS Certified Solutions Architect – Associate) Tj ET
+BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 62.00 142.80 Tm (Amazon Web Services · Oct 2023 – Oct 2026) Tj ET
+BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 52.00 125.80 Tm (Red Hat Certified System Administrator \(RHCSA\)) Tj ET
+BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 62.00 113.40 Tm (Red Hat · EX200 · Dec 2024 – Dec 2027) Tj ET
+BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 52.00 96.40 Tm (Advanced Networking \(CCNA\)) Tj ET
+BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 62.00 84.00 Tm (National Skill Development Corporation · Feb 2022) Tj ET
+BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 310.50 155.20 Tm (Mastering SSL \(TLS\), Keys & Certificates) Tj ET
+BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 320.50 142.80 Tm (Udemy · Jul 2025) Tj ET
+BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 310.50 125.80 Tm (Sophos Firewall Engineer / Technician) Tj ET
+BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 320.50 113.40 Tm (Sophos · Feb 2022) Tj ET
+BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 310.50 96.40 Tm (Computer Hardware Professional) Tj ET
+BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 320.50 84.00 Tm (National Skill Development Corporation · Mar 2021) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Length 306 >>
+stream
+BT /F2 11.2 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 780.00 Tm (EDUCATION) Tj ET
+0.780 0.820 0.930 rg 52.00 777.00 491.00 1.10 re f
+BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 52.00 766.00 Tm (B.E., Computer Engineering) Tj ET
+BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 62.00 753.60 Tm (Karnataka, India) Tj ET
 endstream
 endobj
 10 0 obj
-<< /Length 598 >>
-stream
-BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 52.00 788.00 Tm (Advanced Networking \(CCNA\)) Tj ET
-BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 62.00 775.60 Tm (National Skill Development Corporation · Feb 2022) Tj ET
-BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 310.50 118.30 Tm (Mastering SSL \(TLS\), Keys & Certificates) Tj ET
-BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 320.50 105.90 Tm (Udemy · Jul 2025) Tj ET
-BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 310.50 88.90 Tm (Sophos Firewall Engineer / Technician) Tj ET
-BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 320.50 76.50 Tm (Sophos · Feb 2022) Tj ET
-endstream
-endobj
-11 0 obj
-<< /Length 523 >>
-stream
-BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 310.50 788.00 Tm (Computer Hardware Professional) Tj ET
-BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 320.50 775.60 Tm (National Skill Development Corporation · Mar 2021) Tj ET
-BT /F2 11.2 Tf 0.184 0.373 0.816 rg 1 0 0 1 52.00 750.60 Tm (EDUCATION) Tj ET
-0.780 0.820 0.930 rg 52.00 747.60 491.00 1.10 re f
-BT /F2 9.6 Tf 0.110 0.141 0.188 rg 1 0 0 1 52.00 736.60 Tm (B.E., Computer Engineering) Tj ET
-BT /F1 8.9 Tf 0.520 0.580 0.670 rg 1 0 0 1 62.00 724.20 Tm (Karnataka, India) Tj ET
-endstream
-endobj
-12 0 obj
 << /Title (Vishvanath Patil - Resume) /Author (Vishvanath Patil) >>
 endobj
 xref
-0 13
+0 11
 0000000000 65535 f 
 0000000015 00000 n 
 0000000064 00000 n 
-0000000133 00000 n 
-0000000279 00000 n 
-0000000426 00000 n 
-0000000573 00000 n 
-0000000670 00000 n 
-0000000772 00000 n 
-0000000877 00000 n 
-0000008917 00000 n 
-0000009567 00000 n 
-0000010142 00000 n 
+0000000127 00000 n 
+0000000273 00000 n 
+0000000419 00000 n 
+0000000516 00000 n 
+0000000618 00000 n 
+0000000723 00000 n 
+0000009337 00000 n 
+0000009694 00000 n 
 trailer
-<< /Size 13 /Root 1 0 R /Info 12 0 R >>
+<< /Size 11 /Root 1 0 R /Info 10 0 R >>
 startxref
-10226
+9778
 %%EOF

@@ -32,8 +32,8 @@ var siteConfig = {
   stats: {
     years: "8+",          // overall IT infrastructure experience
     devopsYears: "4+",    // DevOps & Cloud focused years
-    repos: "117+",        // static — currently unused in markup (hero now shows proof chips instead)
-    uptime: "99.9%+"      // payment-critical uptime track record (shown in hero pipeline diagram)
+    repos: "117+",        // static fallback — live count replaces this on load (GitHub API)
+    certs: "6"            // static fallback — replaced by certs.length on load
   },
   certs: [
     { name: "AWS Certified Solutions Architect – Associate", issuer: "Amazon Web Services" },
@@ -96,10 +96,10 @@ var experience = [
     when: "Feb 2024 - Present",
     skills: ["Kubernetes · EKS", "Terraform", "Jenkins", "ArgoCD", "GitOps", "Prometheus · Grafana · Loki", "IAM · KMS", "PCI-DSS"],
     points: [
-      "Own AWS infrastructure for TerraPay's global money-movement platform — delivering a 99.9%+ uptime track record on payment-critical systems.",
-      "Run CI/CD & GitOps end to end — Jenkins and ArgoCD ship zero-downtime releases across production EKS clusters, with Git-driven rollbacks.",
-      "Codify AWS with Terraform and harden the account — VPC, IAM, security groups, KMS — to PCI-DSS and fintech compliance.",
-      "Operate the observability stack (Prometheus, Grafana, Loki) with runbook-driven alerting — cutting alert noise and mean-time-to-recovery.",
+      "Design and operate TerraPay's global money-movement platform on AWS — meeting 99.9%+ uptime on payment-critical infrastructure.",
+      "Build and own CI/CD & GitOps pipelines (Jenkins, ArgoCD) powering zero-downtime releases across EKS clusters.",
+      "Automate cloud provisioning with Terraform and harden the AWS environment — IAM, VPC, security groups, KMS — in line with PCI-DSS and fintech compliance.",
+      "Drive observability with Prometheus, Grafana, and Loki; slash alert noise and mean-time-to-recovery with runbooks.",
       "Mentor engineers and conduct technical interviews to grow the platform team.",
       "Recognized with TerraPay's Superlative Performance Award."
     ]
@@ -111,8 +111,8 @@ var experience = [
     when: "May 2022 - Feb 2024",
     skills: ["AWS", "Kubernetes · EKS", "ECS / Fargate", "ECR", "Jenkins", "SonarQube", "Trivy", "HashiCorp Vault", "ArgoCD"],
     points: [
-      "Delivered end-to-end AWS builds — three-tier applications, EKS platforms, serverless, and ECS/Fargate workloads.",
-      "Shipped complete DevSecOps pipelines (Jenkins, SonarQube, Trivy, HashiCorp Vault, ArgoCD), shifting security left in the SDLC."
+      "Delivered end-to-end infrastructure projects across AWS: three-tier applications, Kubernetes (EKS) platforms, serverless, and containerized workloads on ECS/Fargate.",
+      "Implemented complete DevSecOps pipelines — Jenkins, SonarQube, Trivy, HashiCorp Vault, and ArgoCD — shifting security left."
     ]
   },
   {
@@ -122,8 +122,8 @@ var experience = [
     when: "May 2018 - May 2022",
     skills: ["Ansible", "Linux", "SSL/TLS", "TCP/IP", "Routing & Switching", "Sophos Firewall", "Bash"],
     points: [
-      "Automated Linux administration and SSL/TLS certificate lifecycle management with Ansible.",
-      "Ran enterprise network operations — CCNA-level TCP/IP, routing & switching — and Sophos firewall management."
+      "Automated Linux systems administration, orchestration (Ansible), and SSL/TLS lifecycle management.",
+      "Enterprise network operations — CCNA-level TCP/IP, routing & switching — and Sophos firewall management."
     ]
   }
 ];
@@ -244,6 +244,46 @@ function renderProfilePhoto() {
 }
 
 /* ------------------------------------------------------------
+   9. LIVE STATS — fresh repo & cert counts on every visit
+   Certs come from siteConfig.certs (single source of truth).
+   Repo count is fetched live from the GitHub API; if the fetch
+   fails (offline, rate limit, file://) the static fallback in the
+   markup stays put.
+   ------------------------------------------------------------ */
+function refreshStats() {
+  var set = function (key, value) {
+    document.querySelectorAll('[data-stat="' + key + '"]').forEach(function (el) {
+      el.textContent = value;
+    });
+    // keep the config in sync too, so anything reading siteConfig.stats sees the live value
+    if (siteConfig.stats && siteConfig.stats[key]) siteConfig.stats[key] = value;
+  };
+
+  // 1. certifications — always derivable, no network needed
+  if (siteConfig.certs && siteConfig.certs.length) {
+    set("certs", siteConfig.certs.length);
+  }
+
+  // 2. public repos — live from the GitHub user endpoint
+  var gh = siteConfig.socials && siteConfig.socials.github;
+  var user = gh && gh.url ? gh.url.replace(/^https?:\/\/github\.com\//i, "").split(/[?#]/)[0].replace(/\/+$/, "") : "";
+  if (!user) return;
+
+  var done = false;
+  var timer = setTimeout(function () { if (!done) fail(); }, 8000); // 8s safety net
+  function succeed(count) { if (done) return; done = true; clearTimeout(timer); set("repos", count + "+"); }
+  function fail() { done = true; clearTimeout(timer); } // fallback markup stays
+
+  fetch("https://api.github.com/users/" + encodeURIComponent(user), { cache: "no-store" })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (data) {
+      if (data && typeof data.public_repos === "number") succeed(data.public_repos);
+      else fail();
+    })
+    .catch(fail);
+}
+
+/* ------------------------------------------------------------
    Init
    ------------------------------------------------------------ */
 document.addEventListener("DOMContentLoaded", function () {
@@ -254,4 +294,5 @@ document.addEventListener("DOMContentLoaded", function () {
   setupYear();
   setupBackToTop();
   renderProfilePhoto();
+  refreshStats();
 });

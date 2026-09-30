@@ -9,6 +9,12 @@ mirrors resume.html: A4 page, brand colour #2f5fd0, real word-wrapping via a
 Helvetica glyph-width table, bullet lists, right-aligned dates, section
 underline bars, and automatic multi-page pagination.
 
+Multi-page behaviour: section headings are kept with the block below them,
+Skills/Certification grids and each employer block are never split across a
+page, every page after the first carries a compact name + contact header,
+and pages show a centred "Page X of Y" footer once the resume exceeds one
+page. A one-page resume is composed exactly as drawn — no footer, no extras.
+
 It is the file behind every "Download PDF / Download Resume" button on the
 site, so keep the content below in sync with resume.html (source of truth).
 For a byte-for-byte copy of the HTML page, the "Print / Save as PDF" button
@@ -161,10 +167,28 @@ class Doc:
         return self.pages[-1]
 
     def ensure(self, need):
-        """Open a new page when the next drawing would cross the bottom margin."""
+        """Open a new page when the next drawing would cross the bottom margin.
+
+        When we spill to a second (or later) page, a compact name + contact
+        header is drawn at the top of the fresh page so every page stands on
+        its own.
+        """
         if self.y - need < BM:
             self.pages.append([])
             self.y = TM
+            if len(self.pages) > 1:
+                self.repeat_header()
+
+    def repeat_header(self):
+        """Compact 'name · contact · rule' for every page after the first."""
+        contact = " · ".join(["pvishva93@gmail.com", "+91 92410 93877",
+                              "linkedin.com/in/vishvanath-patil",
+                              "github.com/Vishvanath-Patil"])
+        self.text_at("Vishvanath Patil", 11.5, "HEB", "ink", LM)
+        self.text_at(contact, 7.8, "HEL", "faint",
+                     PAGE_W - LM - w_pt(contact, 7.8, "HEL"))
+        self.rule(-3.0, CONTENT_W, 1.2, "blueSoft")
+        self.advance(15.0)
 
     def advance(self, n):
         self.y -= n
@@ -209,17 +233,46 @@ class Doc:
             self.advance(leading)
         self.advance(space_after)
 
-    def section(self, title):
+    def section(self, title, keep=0):
         # The under-rule sits ~3.5pt below the heading baseline — clearly under
         # the capital letters (which end at the baseline), never through text.
         # The drop after it keeps the first content line clear as well.
-        self.ensure(26)
+        # With `keep` (height of the block right below), a heading is only drawn
+        # when heading + that block both fit — no orphaned heading at a page
+        # bottom. need = heading advances (8 + 15.4) + keep; the plain 26 is
+        # kept for the no-keep case.
+        self.ensure(23.4 + keep if keep else 26)
         self.advance(8)
         self.text_at(title.upper(), 11.0, "HEB", "blue", LM)
         self.rule(-3.5, CONTENT_W, 1.2, "blueSoft")
         self.advance(15.4)
 
+    def job_height(self, e):
+        """Exact vertical extent of one employer block (mirrors experience())."""
+        title = "%s — %s" % (e["role"], e["company"])
+        when = e["when"]
+        date_w = w_pt(when, 9.1, "HEL")
+        budget = CONTENT_W - date_w - 14
+        lead = 14.2
+        if w_pt(title, 10.4, "HEB") <= budget:
+            h = lead
+        else:
+            h = len(self.wrap(title, 10.4, "HEB", budget)) * lead
+        sub = "  |  ".join(x for x in (e.get("meta", ""), e.get("tags", "")) if x)
+        if sub:
+            h += len(self.wrap(sub, 8.7, "HEL")) * 10.5 + 2.4
+        for pt in e["points"]:
+            h += len(self.wrap(pt, 9.5, "HEL", CONTENT_W - 12)) * 11.3 + 0.5
+        return h + 10.0
+
+    def para_height(self, text, *, size=9.6, font="HEL", leading=12.4,
+                    space_after=4.0, indent=0, hang=0):
+        """Vertical extent a para() will consume (mirrors Doc.para)."""
+        width = CONTENT_W - indent - hang
+        return len(self.wrap(text, size, font, width)) * leading + space_after
+
     def experience(self, e):
+        self.ensure(self.job_height(e))   # keep one employer block on one page
         title = "%s — %s" % (e["role"], e["company"])
         when = e["when"]
         date_w = w_pt(when, 9.1, "HEL")
@@ -254,8 +307,32 @@ class Doc:
         else:
             self.advance(3.2)
 
+    def grid2_height(self, items, gap=26.0):
+        """Exact vertical extent a grid2() will consume (mirrors grid2())."""
+        col_w = (CONTENT_W - gap) / 2.0
+        pad, n_size, d_size, n_lead, d_lead = 3.4, 9.5, 8.9, 11.2, 10.0
+
+        def rows(item):
+            name, detail = item
+            rs = [("n", ln) for ln in self.wrap(name, n_size, "HEB", col_w - 10)]
+            if detail:
+                rs += [("d", ln) for ln in self.wrap(detail, d_size, "HEL", col_w - 10)]
+            return rs
+
+        hs = [sum(n_lead if t == "n" else d_lead for t, _ in rows(it)) + pad
+              for it in items]
+        half = sum(hs) / 2.0
+        acc, split = 0.0, len(items)
+        for i, h in enumerate(hs):
+            if acc > 0 and acc + h > half:
+                split = i
+                break
+            acc += h
+        return max(sum(hs[:split]), sum(hs[split:]))
+
     def grid2(self, items, gap=26.0):
         """Two-column layout for (name, detail) pairs — mirrors .r-grid2."""
+        self.ensure(self.grid2_height(items, gap))   # keep the whole grid on one page
         col_w = (CONTENT_W - gap) / 2.0
         pad = 3.4
         n_size, d_size, n_lead, d_lead = 9.5, 8.9, 11.2, 10.0
@@ -322,21 +399,23 @@ def compose():
     d.rule(-4.0, CONTENT_W, 1.6, "blue")
     d.advance(17.0)   # visible breathing room between the brand line and Summary
 
-    # Sections
-    d.section("Summary")
+    # Sections — each heading is kept with the block under it so a heading
+    # never dangles at the bottom of a page.
+    d.section("Summary", keep=d.para_height(SUMMARY, size=9.6, leading=12.2))
     d.para(SUMMARY, size=9.6, leading=12.2)
 
-    d.section("Experience")
+    d.section("Experience", keep=d.job_height(EXPERIENCE[0]))
     for e in EXPERIENCE:
         d.experience(e)
 
-    d.section("Skills")
+    d.section("Skills", keep=d.grid2_height(SKILLS))
     d.grid2(SKILLS)
 
-    d.section("Certifications")
+    d.section("Certifications", keep=d.grid2_height(CERTS))
     d.grid2(CERTS)
 
-    d.section("Education")
+    ed_h = sum(12.4 + 11.0 + 3.2 if detail else 12.4 + 3.2 for _, detail in EDUCATION)
+    d.section("Education", keep=ed_h)
     for name, detail in EDUCATION:
         d.named(name, detail)
 
@@ -362,6 +441,12 @@ def build_pdf(ops_pages, title="Vishvanath Patil - Resume",
         objects.append((fonts0 + i, b"<< /Type /Font /Subtype /Type1 /BaseFont " + name +
                         b" /Encoding /WinAnsiEncoding >>"))
     for i, ops in enumerate(ops_pages):
+        if n > 1:   # "Page X of Y" only when the resume really spans pages
+            label = "Page %d of %d" % (i + 1, n)
+            x = LM + (CONTENT_W - w_pt(label, 9.0)) / 2.0
+            r, g, b = COL["faint"]
+            ops = ops + ["BT /F1 9 Tf %.3f %.3f %.3f rg 1 0 0 1 %.2f %.2f Tm (%s) Tj ET"
+                         % (r, g, b, x, 32.0, esc(label))]
         content = "\n".join(ops).encode("cp1252", "replace")
         objects.append((stream0 + i, b"<< /Length %d >>\nstream\n" % len(content) +
                         content + b"\nendstream"))

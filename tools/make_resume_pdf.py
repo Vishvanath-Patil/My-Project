@@ -212,12 +212,12 @@ class Doc:
     def section(self, title):
         # The under-rule sits ~3.5pt below the heading baseline — clearly under
         # the capital letters (which end at the baseline), never through text.
-        # The 16pt drop after it keeps the first content line clear as well.
+        # The drop after it keeps the first content line clear as well.
         self.ensure(26)
         self.advance(8)
         self.text_at(title.upper(), 11.0, "HEB", "blue", LM)
         self.rule(-3.5, CONTENT_W, 1.2, "blueSoft")
-        self.advance(16)
+        self.advance(15.4)
 
     def experience(self, e):
         title = "%s — %s" % (e["role"], e["company"])
@@ -240,11 +240,11 @@ class Doc:
                 self.advance(lead)
         sub = "  |  ".join(x for x in (e.get("meta", ""), e.get("tags", "")) if x)
         if sub:
-            self.para(sub, size=8.7, color="faint", leading=10.8, space_after=2.4)
+            self.para(sub, size=8.7, color="faint", leading=10.5, space_after=2.4)
         for pt in e["points"]:
-            self.para(pt, size=9.5, leading=11.8, hang=12, bullet="•",
+            self.para(pt, size=9.5, leading=11.3, hang=12, bullet="•",
                       space_after=0.5)
-        self.advance(1.75)
+        self.advance(10.0)   # clear gap before the next employer block
 
     def named(self, name, detail):
         self.para(name, size=9.6, font="HEB", color="ink", leading=12.4, space_after=0)
@@ -257,8 +257,8 @@ class Doc:
     def grid2(self, items, gap=26.0):
         """Two-column layout for (name, detail) pairs — mirrors .r-grid2."""
         col_w = (CONTENT_W - gap) / 2.0
-        pad = 4.0
-        n_size, d_size, n_lead, d_lead = 9.5, 8.9, 11.6, 10.4
+        pad = 3.4
+        n_size, d_size, n_lead, d_lead = 9.5, 8.9, 11.2, 10.0
 
         def rows(item):
             name, detail = item
@@ -306,11 +306,11 @@ def compose():
     # Header — name, role, open-to, then a two-line centred contact block
     # (LinkedIn + GitHub on their own clean row, no trailing "|").
     d.text_at("Vishvanath Patil", 23, "HEB", "ink", LM)
-    d.advance(20)
+    d.advance(18.5)
     d.text_at(ROLE, 10.8, "HEB", "blue", LM)
-    d.advance(11.0)
+    d.advance(10.2)
     d.text_at(OPEN_TO, 9.4, "HEI", "soft", LM)
-    d.advance(10.0)
+    d.advance(9.2)
     d.text_at(CONTACT_MAIN, 9.0, "HEL", "soft",
               LM + (CONTENT_W - w_pt(CONTACT_MAIN, 9.0)) / 2.0)
     d.advance(12.0)
@@ -320,11 +320,11 @@ def compose():
     # Brand rule directly under the contact block — 4pt below its baseline, so it
     # sits in the header whitespace and never touches the first section heading.
     d.rule(-4.0, CONTENT_W, 1.6, "blue")
-    d.advance(8.0)
+    d.advance(17.0)   # visible breathing room between the brand line and Summary
 
     # Sections
     d.section("Summary")
-    d.para(SUMMARY, size=9.6, leading=12.8)
+    d.para(SUMMARY, size=9.6, leading=12.2)
 
     d.section("Experience")
     for e in EXPERIENCE:

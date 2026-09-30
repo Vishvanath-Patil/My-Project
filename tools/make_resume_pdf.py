@@ -87,11 +87,11 @@ EXPERIENCE = [
         "tags": "DevOps · Amazon Web Services (AWS)",
         "when": "Feb 2024 – Present",
         "points": [
-            "Design and operate TerraPay's global money-movement platform on AWS — meeting 99.9%+ uptime on payment-critical infrastructure.",
-            "Build and own CI/CD & GitOps pipelines (Jenkins, ArgoCD) for zero-downtime releases across EKS clusters.",
-            "Automate provisioning with Terraform and harden the AWS environment (IAM, VPC, security groups, KMS) for PCI-DSS & fintech compliance.",
-            "Drive observability with Prometheus, Grafana, and Loki to reduce alert noise and MTTR.",
-            "Mentor engineers, conduct technical interviews, and represent the platform team's reliability culture.",
+            "Own AWS infrastructure for TerraPay's global money-movement platform — delivering a 99.9%+ uptime track record on payment-critical systems.",
+            "Run CI/CD & GitOps end to end — Jenkins and ArgoCD ship zero-downtime releases across production EKS clusters, with Git-driven rollbacks.",
+            "Codify AWS with Terraform and harden the account — VPC, IAM, security groups, KMS — to PCI-DSS and fintech compliance.",
+            "Operate the observability stack (Prometheus, Grafana, Loki) with runbook-driven alerting — cutting alert noise and mean-time-to-recovery.",
+            "Mentor engineers and conduct technical interviews to grow the platform team.",
             "Recognized with TerraPay's Superlative Performance Award.",
         ],
     },
@@ -101,8 +101,8 @@ EXPERIENCE = [
         "tags": "Prometheus · Kubernetes",
         "when": "May 2022 – Feb 2024",
         "points": [
-            "Delivered end-to-end AWS projects — three-tier applications, EKS platforms, serverless, and ECS/Fargate workloads.",
-            "Implemented complete DevSecOps pipelines (Jenkins, SonarQube, Trivy, Vault, ArgoCD), shifting security left in the SDLC.",
+            "Delivered end-to-end AWS builds — three-tier applications, EKS platforms, serverless, and ECS/Fargate workloads.",
+            "Shipped complete DevSecOps pipelines (Jenkins, SonarQube, Trivy, HashiCorp Vault, ArgoCD), shifting security left in the SDLC.",
         ],
     },
     {
@@ -111,8 +111,8 @@ EXPERIENCE = [
         "tags": "",
         "when": "May 2018 – May 2022",
         "points": [
-            "Automated Linux systems administration, Ansible orchestration, and SSL/TLS certificate lifecycle management.",
-            "Enterprise network operations — CCNA-level TCP/IP, routing & switching — and Sophos firewall management.",
+            "Automated Linux administration and SSL/TLS certificate lifecycle management with Ansible.",
+            "Ran enterprise network operations — CCNA-level TCP/IP, routing & switching — and Sophos firewall management.",
         ],
     },
 ]

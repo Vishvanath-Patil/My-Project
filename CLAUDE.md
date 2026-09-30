@@ -21,8 +21,14 @@ There is no build, test, or lint toolchain. To develop:
 **One config-driven JS file** — `assets/js/site.js`, loaded at the end of `<body>` on every page. Its `DOMContentLoaded` init (`renderSocials`, `feedPage`, `setupTheme`, `setupNav`, `setupYear`) fills in elements marked with hooks. Rules for wiring widgets:
 
 - `data-socials` (on a `<ul class="socials">`) → `renderSocials()` injects the social icon list. `data-socials="mail"` also appends the mail icon; other pages just `data-socials`.
-- `data-brand-name` → `feedPage()` sets brand text in nav + footer.
+- `data-brand-name` → `feedPage()` sets brand text in nav + footer. Every page's nav brand must use this hook (not a hardcoded name).
 - IDs `themeToggle`, `navToggle`, `navMenu`, `year` are wired by `setupTheme`/`setupNav`/`setupYear` and must stay unique per page.
+
+**End-to-end note**: The hero no longer shows the GitHub repo / certification counts — the vanity "117+ repos" metric was retired. The `refreshStats()` live-GitHub-fetch was removed; there are no `data-stat` hooks left in the markup. Personal stats live in `siteConfig.stats` + the hero pipeline diagram chips (`index.html`).
+
+**Hero**: `index.html` hero has two columns — copy on the left (primary CTA scrolls to `#projects`; the PDF download is the secondary action, with an email/contact aside below), and the **pipeline diagram** on the right (`.pipe-card`, an animated SVG: git → Jenkins → ECR → ArgoCD → EKS → payment API, with 99.9%+/PCI-DSS/4+yr chips). It themes with CSS variables and respects `prefers-reduced-motion`. Keep the diagram's `aria-label` in sync with any stage changes.
+
+**Projects pages**: featured builds (real infrastructure) lead on both `index.html` and `products.html`; tutorial/study-kit repos are grouped separately under "Learning & study kits" on `products.html` so learning content doesn't dilute the senior positioning.
 
 **Single edit point for personal data.** `siteConfig` (name, role, email, social URLs, stats) and the `experience` array (both in `site.js`) drive socials, footer, contact links, and the experience sections. Personal details should be changed in `site.js`, not by editing duplicated text in the HTML — though the hero/about/experience text on `index.html` and `resume.html` is static HTML that must be updated by hand to match `site.js`.
 

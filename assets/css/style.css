@@ -248,19 +248,43 @@ section { padding: 56px 0; }
 .hero-quick li svg, .hero-quick li img { width: 18px; height: 18px; flex: 0 0 auto; }
 
 .hero-art { display: flex; justify-content: center; }
-.hero-card {
-  width: 100%; max-width: 400px; background: var(--surface); border: 1px solid var(--border);
-  border-radius: 22px; padding: 26px; box-shadow: var(--shadow-lg); position: relative;
-}
-.hero-card h3 { font-size: 1.05rem; margin: 0 0 2px; }
-.hero-card .who { color: var(--text-faint); font-size: 0.9rem; margin-bottom: 18px; }
 .avatar-photo { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block; }
-.card-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 16px 0; }
-.card-stat { background: var(--surface-muted); border-radius: var(--radius-sm); padding: 12px; text-align: center; }
-.card-stat b { display: block; font-size: 1.25rem; color: var(--primary); }
-.card-stat span { font-size: 0.74rem; color: var(--text-faint); }
-.card-actions { display: flex; gap: 8px; }
-.card-actions .btn { flex: 1; }
+
+.hero-aside { margin: 0; font-size: 0.9rem; color: var(--text-faint); }
+.hero-aside a { font-weight: 700; color: var(--primary); }
+
+/* hero pipeline diagram */
+.pipe-card {
+  width: 100%; max-width: 420px; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 22px;
+  padding: 16px 16px 12px; box-shadow: var(--shadow-lg);
+}
+.pipe-cap {
+  font-family: var(--font-mono); font-size: 0.66rem; font-weight: 700;
+  letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-faint);
+  margin: 0 0 10px;
+}
+.pipe-svg { width: 100%; height: auto; display: block; }
+.pipe-flow {
+  fill: none; stroke: var(--primary); stroke-width: 1.4; stroke-linecap: round;
+  stroke-dasharray: 5 6; animation: pipe-flow 0.9s linear infinite;
+}
+@keyframes pipe-flow { to { stroke-dashoffset: -11; } }
+.pipe-arrow { fill: var(--primary); }
+.pipe-node .pipe-box { fill: var(--surface-muted); stroke: var(--border); }
+.pipe-node circle { fill: var(--primary); }
+.pipe-node text { fill: #fff; font-weight: 700; }
+.pipe-node .pipe-label { fill: var(--text); }
+.pipe-glow { fill: var(--accent-soft); animation: pulse 2.2s linear infinite; }
+.pipe-badge rect {
+  fill: var(--primary-soft); stroke: color-mix(in srgb, var(--primary) 40%, transparent);
+}
+.pipe-badge text { fill: var(--primary); font-weight: 700; }
+.pipe-chip rect {
+  fill: var(--accent-soft); stroke: color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.pipe-chip text { fill: var(--accent); font-weight: 700; }
+.pipe-node text, .pipe-badge text, .pipe-chip text { font-family: var(--font-mono); font-size: 8px; }
 
 /* ---------- 7. Socials ---------- */
 .socials { display: flex; gap: 10px; list-style: none; padding: 0; margin: 0; }
@@ -548,6 +572,13 @@ section { padding: 56px 0; }
   background: linear-gradient(92deg, var(--primary), var(--accent));
   -webkit-background-clip: text; background-clip: text; color: transparent; }
 .nf p { color: var(--text-soft); max-width: 440px; }
+.nf-cmd {
+  font-family: var(--font-mono); font-size: 0.85rem; text-align: left;
+  background: var(--surface-muted); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 14px 18px; margin-top: 20px; max-width: 520px; line-height: 1.7;
+}
+.nf-cmd .nf-hash { color: var(--accent); font-weight: 700; }
+.nf-cmd .nf-out { color: var(--text-faint); }
 
 /* ---------- 16. Utilities ---------- */
 .hidden { display: none !important; }

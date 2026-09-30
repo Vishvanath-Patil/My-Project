@@ -4,7 +4,7 @@ Personal career portfolio for **Vishvanath Patil** (Senior Cloud Engineer @ Terr
 A pure static HTML/CSS/JS website — **no server, no build step, no dependencies**.
 
 - 🔖 **Digital resume** — `resume.html` (print / "Save as PDF" friendly) + downloadable `assets/resume/Resume.pdf`
-- 📦 **Digital products** — `products.html` (study kits, guides, learning resources)
+- 📦 **Projects** — `products.html` (featured production-style builds, plus learning kits & guides)
 - 📬 **Contact** — `contact.html` (mailto-based contact form, social links)
 - 🌐 **Socials** — LinkedIn, GitHub, Instagram, YouTube (footer of every page)
 
@@ -70,8 +70,9 @@ Static text (about section, project cards, experience) lives directly in each `.
 
 ### Favicon & images
 - `favicon.svg` is hand-drawn; replace if you want.
-- Hero art and product thumbnails in `assets/img/` are inline SVGs — swap them for your own photos if you wish.
-- Profile photo: drop a real headshot at **`assets/img/profile.jpg`** and every `data-avatar` badge uses it automatically (nav + hero card). Without that file the site falls back to the GitHub avatar; without a network it stays a monogram.
+- The hero **pipeline diagram** on `index.html` is a hand-built animated SVG (git → Jenkins → ECR → ArgoCD → EKS → payment API) — it themes with the CSS variables and is the visual anchor of the site.
+- Project thumbnails in `assets/img/brand/` are tech-brand SVGs; swap them for your own screenshots/diagrams if you wish.
+- Profile photo: drop a real headshot at **`assets/img/profile.jpg`** and every `data-avatar` badge uses it automatically (nav + footer). Without that file the site falls back to the GitHub avatar; without a network it stays a monogram.
 
 ---
 
